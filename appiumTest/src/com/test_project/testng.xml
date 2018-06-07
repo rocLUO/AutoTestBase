@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test" parallel="true">
+	<test name="test" preserver-order="true">
+		<classes>
+			<class name="com.test_project.test_pre0502" /><!--测试类所在包-->
+			<method>
+				<incloud name="case2_1_6" /><!--被测类中的方法名 -->
+				<incloud name="case2_1_7" />
+				<incloud name="case3_3_2" />
+				<incloud name="case3_3_5" />
+				<incloud name="case3_3_6" />
+				<incloud name="case3_3_7" />
+				<incloud name="case3_3_3" />
+				<incloud name="case3_3_4" />
+				<incloud name="case3_4_1" />
+				<incloud name="case3_4_2" />
+				<incloud name="case3_4_3" />
+				<incloud name="case3_4_4" />
+				<incloud name="case3_4_5" />
+				<incloud name="case3_4_6" />
+				<incloud name="case3_4_7" />
+				<incloud name="case3_4_8" />
+				<incloud name="case3_1_1" />
+				<incloud name="case3_2_1" />
+				<incloud name="case3_2_2" />
+				<incloud name="case3_2_3" />
+				<incloud name="case4_1_1_4" />
+				<incloud name="case4_1_2_5" />
+				<incloud name="case4_1_3" />
+				<incloud name="case4_1_6" />
+			</method>
+		</classes>
+		<listeners>
+			<!--这是你需要加的东西 -->
+			<listener class-name="org.uncommons.reportng.HTMLReporter" />
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+	</test> <!-- Test -->
+</suite> <!-- Su

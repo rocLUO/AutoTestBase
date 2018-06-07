@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test" parallel="true">
+	<test name="test" preserver-order="true">
+		<classes>
+			<class name="com.testNgDemo.NgDemo1" /><!--测试类所在包-->
+			<method>
+				<incloud name="plus" /><!--被测类中的方法名-->
+			</method>
+		</classes>
+		<listeners>
+			<!--这是你需要加的东西 -->
+			<listener class-name="org.uncommons.reportng.HTMLReporter" />
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+		
+	</test> <!-- Test -->
+</suite> <!-- Su
