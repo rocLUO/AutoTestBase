@@ -1,0 +1,84 @@
+qycloudtest:
+    config:
+        host: https://www.qycloud.com.cn
+        user:
+            admin: [admin_pretest, 11111111]
+            dulei: [15190450427,leige666]
+
+
+integration:
+    config:
+        host: http://www.test.integration.aysaas.com:55555
+        user:
+            admin: [apitest, 111111]
+            dulei: [LIDdulei,11111111]
+            ryj: [Lryj,11111111]
+            wcm:   [Lwcm,11111111]
+            utest131: [utest131,11111111]
+            utest132: [utest132,11111111]
+            yrr:   [Lryy,11111111]
+            wsm:   [Lzongjingli,11111111]
+            maojia: [Lmj,11111111]
+            root: [root,AnYuan]
+            yuanfen: [Lyuanfeng,11111111]
+            zzc: [Lzzc,11111111]
+
+
+initialization:
+    config:
+        host: http://www.test.initialization.aysaas.com:5566
+        user:
+            admin: [apitest, 111111]
+            dulei: [LIDdulei,11111111]
+            ryj: [Lryj,11111111]
+            wcm:   [Lwcm,11111111]
+            utest132: [utest132,11111111]
+            yrr:   [Lryy,11111111]
+            wsm:   [Lzongjingli,11111111]
+
+
+
+node:
+    config:
+        host: http://node.feature.nodenew.aysaas.com:7005
+        user:
+            admin: [apitest, 111111]
+            dulei: [LIDdulei,11111111]
+            ryj: [Lryj,11111111]
+            wcm:   [Lwcm,11111111]
+
+
+debugforwf:
+    config:
+        host: http://www.feature.debugforwf.aysaas.com:55555
+        user:
+            admin: [apitest, 111111]
+            dulei: [LIDdulei,11111111]
+            ryj: [Lryj,11111111]
+            wcm:   [Lwcm,11111111]
+
+
+
+hotfixmaster:
+    config:
+        host: http://www.hotfix.master.aysaas.com:8040
+        user:
+            admin: [apitest, 111111]
+            dulei: [LIDdulei,11111111]
+            ryj: [Lryj,11111111]
+            wcm:   [Lwcm,11111111]
+            utest131: [utest131,11111111]
+            utest132: [utest132,11111111]
+            yrr:   [Lryy,11111111]
+            wsm:   [Lzongjingli,11111111]
+            maojia: [Lmj,11111111]
+            root: [root,AnYuan]
+            yuanfen: [Lyuanfeng,11111111]
+            zzc: [Lzzc,11111111]
+
+
+qycloud:
+    config:
+        host: https://www.qycloud.com.cn
+        user:
+            admin: [admin_pretest, 11111111]

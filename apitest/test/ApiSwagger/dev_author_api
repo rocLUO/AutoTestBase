@@ -1,0 +1,564 @@
+/*测试开发者授权接口操作 Swagger
+ *
+ *
+ *http://git.qycloud.com.cn/qy/saas/merge_requests/210
+ *
+ */
+
+
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "api2 auth 相关接口",
+        "description": "<b>api现有接口文档列<\/b>表 \n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/analysis' target='_blank'>analysis<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/app' target='_blank'>app<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/comments' target='_blank'>comments<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/dashboard' target='_blank'>dashboard<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/datacenter' target='_blank'>datacenter<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/doc' target='_blank'>doc<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/enteroperation' target='_blank'>enteroperation<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/information' target='_blank'>information<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/lead' target='_blank'>lead<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/notice' target='_blank'>notice<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/rulesengin' target='_blank'>rulesengin<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/store' target='_blank'>store<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v1\/user' target='_blank'>user<\/a>\n\r <b>api2现有接口文档列<\/b>表 \n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/appcenter' target='_blank'>appcenter<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/auth' target='_blank'>auth<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/chartcategory' target='_blank'>chartcategory<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/chat' target='_blank'>chat<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/datacenter' target='_blank'>datacenter<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/dataflow' target='_blank'>dataflow<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/home' target='_blank'>home<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/information' target='_blank'>information<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/message' target='_blank'>message<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/notice' target='_blank'>notice<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/organization' target='_blank'>organization<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/search' target='_blank'>search<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/uiengine' target='_blank'>uiengine<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/user' target='_blank'>user<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/verifycode' target='_blank'>verifycode<\/a>\n\r<a href='.\/index.html?url=http:\/\/www.feature.apiaccess.aysaas.com:55555\/api\/doc\/swagger\/v2\/workflow' target='_blank'>workflow<\/a>",
+        "termsOfService": "http:\/\/helloreverb.com\/terms\/",
+        "contact": {
+            "email": "duanfeisj@sina.com"
+        },
+        "version": "1.0.0"
+    },
+    "host": "www.feature.apiaccess.aysaas.com:55555",
+    "basePath": "\/",
+    "schemes": ["http"],
+    "paths": {
+        "\/api2\/auth\/access\/": {
+            "get": {
+                "tags": ["access"],
+                "summary": "获取 key",
+                "description": "获取 key",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "name": "password",
+                    "in": "query",
+                    "description": "当前用户密码",
+                    "required": true,
+                    "type": "string",
+                    "default": "111111"
+                },
+                {
+                    "$ref": "#\/parameters\/accessKey"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_get"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_get_response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": ["access"],
+                "summary": "重新申请开发接口Key",
+                "description": "申请开发接口权限",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "$ref": "#\/parameters\/accessKey"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_post"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_post_response"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": ["access"],
+                "summary": "申请开发接口权限",
+                "description": "申请开发接口权限",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "parameter": "ay_u",
+                    "name": "ay_u",
+                    "in": "query",
+                    "description": "登录用户名",
+                    "type": "string",
+                    "default": "apitest"
+                },
+                {
+                    "parameter": "ay_p",
+                    "name": "ay_p",
+                    "in": "query",
+                    "description": "登录用户密码",
+                    "type": "string",
+                    "default": "111111"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_post"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_post_response"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["access"],
+                "summary": "删除接口权限key key",
+                "description": "删除接口权限key",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "name": "password",
+                    "in": "query",
+                    "description": "当前用户密码",
+                    "required": true,
+                    "type": "string",
+                    "default": "111111"
+                },
+                {
+                    "$ref": "#\/parameters\/accessKey"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_post"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_access_delete_response"
+                        }
+                    }
+                }
+            }
+        },
+        "\/api2\/auth\/review\/": {
+            "get": {
+                "tags": ["review"],
+                "summary": "获取申请接口列表",
+                "description": "获取申请接口列表",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "name": "start",
+                    "in": "query",
+                    "description": "开始位置",
+                    "required": false,
+                    "type": "integer",
+                    "default": "0"
+                },
+                {
+                    "name": "limit",
+                    "in": "query",
+                    "description": "显示记录数，上限50",
+                    "required": false,
+                    "type": "integer",
+                    "default": "10"
+                },
+                {
+                    "name": "userId",
+                    "in": "query",
+                    "description": "用户id",
+                    "required": false,
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "name": "enterpriseId",
+                    "in": "query",
+                    "description": "企业id",
+                    "required": false,
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "name": "status",
+                    "in": "query",
+                    "description": "状态查询",
+                    "required": false,
+                    "type": "integer",
+                    "default": "0"
+                },
+                {
+                    "parameter": "ay_u",
+                    "name": "ay_u",
+                    "in": "query",
+                    "description": "管理员用户名",
+                    "type": "string",
+                    "default": "root"
+                },
+                {
+                    "parameter": "ay_p",
+                    "name": "ay_p",
+                    "in": "query",
+                    "description": "管理员用户密码",
+                    "type": "string",
+                    "default": "AnYuan"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_review_get"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_review_get_response"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": ["review"],
+                "summary": "确认审核",
+                "description": "确认审核",
+                "consumes": ["application\/x-www-form-urlencoded"],
+                "produces": ["application\/json", "application\/xml"],
+                "parameters": [{
+                    "name": "accessId",
+                    "in": "formData",
+                    "description": "申请接口权限记录id",
+                    "required": true,
+                    "type": "integer",
+                    "default": "1"
+                },
+                {
+                    "name": "status",
+                    "in": "formData",
+                    "description": "审核状态：1、审核不通过 2、审核通过",
+                    "required": true,
+                    "type": "integer",
+                    "default": "1"
+                },
+                {
+                    "parameter": "ay_u",
+                    "name": "ay_u",
+                    "in": "query",
+                    "description": "管理员用户名",
+                    "type": "string",
+                    "default": "root"
+                },
+                {
+                    "parameter": "ay_p",
+                    "name": "ay_p",
+                    "in": "query",
+                    "description": "管理员用户密码",
+                    "type": "string",
+                    "default": "AnYuan"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "成功返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_review_post"
+                        }
+                    },
+                    "404": {
+                        "description": "失败返回",
+                        "schema": {
+                            "$ref": "#\/definitions\/auth_review_post_response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ResponseSuccessModel": {
+            "required": ["success", "data"],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "data": {
+                    "type": "string"
+                }
+            }
+        },
+        "ResponseErrorModel": {
+            "required": ["success", "code", "msg"],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "code": {
+                    "type": "integer",
+                    "default": 400,
+                    "enum": [404, 500]
+                },
+                "msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "auth_access_post": {
+            "description": "申请开发接口权限",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "result": {
+                    "type": "string",
+                    "example": "申请成功"
+                }
+            },
+            "type": "object"
+        },
+        "auth_access_post_response": {
+            "description": "申请开发接口权限",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 500
+                },
+                "result": {
+                    "type": "string",
+                    "example": "申请失败"
+                }
+            },
+            "type": "object"
+        },
+        "auth_access_get": {
+            "description": "申请开发接口权限",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "result": {
+                    "type": "object",
+                    "example": {
+                        "id": "1",
+                        "access_key": "access_key",
+                        "expired": "0",
+                        "status": "1"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "auth_access_get_response": {
+            "description": "申请开发接口权限",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 500
+                },
+                "result": {
+                    "type": "array",
+                    "example": []
+                }
+            },
+            "type": "object"
+        },
+        "auth_access_delete": {
+            "description": "删除接口权限key",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "result": {
+                    "type": "array",
+                    "example": "删除成功"
+                }
+            },
+            "type": "object"
+        },
+        "auth_access_delete_response": {
+            "description": "删除接口权限key",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 500
+                },
+                "result": {
+                    "type": "array",
+                    "example": "删除失败"
+                }
+            },
+            "type": "object"
+        },
+        "auth_review_post": {
+            "description": "确认审核",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "result": {
+                    "type": "string",
+                    "example": "审核成功"
+                }
+            },
+            "type": "object"
+        },
+        "auth_review_post_response": {
+            "description": "确认审核响应",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 500
+                },
+                "result": {
+                    "type": "string",
+                    "example": "审核失败"
+                }
+            },
+            "type": "object"
+        },
+        "auth_review_get": {
+            "description": "获取申请接口权限列表",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "result": {
+                    "items": {
+                        "$ref": "#\/definitions\/auth_review_get_result"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "auth_review_get_result": {
+            "description": "获取申请接口权限列表",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "access_key": {
+                    "type": "string",
+                    "example": "a031f719c9633363b08e3b3515234014g69bvtmnvgrfs4hz"
+                },
+                "expired": {
+                    "type": "integer",
+                    "example": "1836700880"
+                },
+                "user_id": {
+                    "type": "string",
+                    "example": "apitest"
+                },
+                "enterprise_id": {
+                    "type": "string",
+                    "example": "APICeShiQiYe"
+                },
+                "status": {
+                    "type": "integer",
+                    "example": "2"
+                }
+            },
+            "type": "object"
+        },
+        "auth_review_get_response": {
+            "description": "获取申请接口权限列表响应",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "example": 500
+                },
+                "result": {
+                    "type": "string",
+                    "example": "获取失败"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "parameters": {
+        "cleanCache": {
+            "name": "cleanCache",
+            "in": "query",
+            "description": "清除缓存",
+            "type": "boolean"
+        },
+        "paging_perPage": {
+            "name": "paging[perPage]",
+            "in": "query",
+            "description": "每页显示的个数, 默认20",
+            "type": "integer",
+            "default": 20
+        },
+        "paging_limit": {
+            "name": "paging[start]",
+            "in": "query",
+            "description": "分页参数，第几页",
+            "type": "integer",
+            "default": 1
+        },
+        "ay_u": {
+            "name": "ay_u",
+            "in": "query",
+            "description": "登录用户名",
+            "type": "string",
+            "default": "apitest"
+        },
+        "ay_p": {
+            "name": "ay_p",
+            "in": "query",
+            "description": "登录用户密码",
+            "type": "string",
+            "default": "111111"
+        },
+        "accessKey": {
+            "name": "accessKey",
+            "in": "query",
+            "description": "授权密钥",
+            "type": "string",
+            "default": "eba104b98e5e86c7346176fab5b7633e6r1c089ih2g8uo0q"
+        }
+    },
+    "responses": {
+        "Success": {
+            "description": "返回成功",
+            "schema": {
+                "$ref": "#\/definitions\/ResponseSuccessModel"
+            }
+        },
+        "Error": {
+            "description": "返回失败",
+            "schema": {
+                "$ref": "#\/definitions\/ResponseErrorModel"
+            }
+        }
+    },
+    "tags": [{
+        "name": "access",
+        "description": "申请开发接口权限，需要非管理员权限帐号才能操作",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "http:\/\/swagger.io"
+        }
+    },
+    {
+        "name": "review",
+        "description": "审核开发接口权限，需要管理员权限帐号才能操作",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "http:\/\/swagger.io"
+        }
+    }]
+}
