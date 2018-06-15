@@ -20,7 +20,7 @@ public class TestInfo {
 	//手机参数设置
 	public String Platform = "Android";
 	public String PhoneCode = "MKJNW17C20005057";
-	public String ApkPackage = "com.android.ayplatform.pre";
+	public String ApkPackage = "com.android.ayplatform.release";
 	public String ApkActivity = "com.android.ayplatform.activity.WelcomeActivity";
 	public String Version = "8.0";
 
@@ -28,14 +28,14 @@ public class TestInfo {
 	public static int waitTime = 60;
 
 	//test lunch environment
-	String type = "pre";
+	public static String type = ".release";
 
 	// login method use
 	public String Account = "admin_pretest";
 	public String Password = "11111111";
 
 	// change account name
-	public String ForAccountName = "李根";
+	public String ForAccountName = "";
 
 	//登录页
 	public String LoginPage_Id = "com.android.ayplatform:id/cardNumAuto";
@@ -51,11 +51,13 @@ public class TestInfo {
 
 	public static String MainPage_Bar_Work_Xpath = "//android.widget.TextView[@text='工作']";
 	public static String MainPage_Bar_QiLiao_Xpath = "//android.widget.TextView[@text='启聊']";
-	public static String MainPage_Bar_DashBoard_Xpath = "//android.widget.TextView[@text='仪表盘']";
+	public static String MainPage_Bar_DashBoard_Xpath = "//android.wmidget.TextView[@text='仪表盘']";
 	public static String MainPage_Bar_App_Xpath = "//android.widget.TextView[@text='应用']";
 	public static String MainPage_Bar_Discovery_Xpath = "//android.widget.TextView[@text='发现']";
+	public static String MainPage_Bar_Protal_Xpath = "//android.widget.TextView[@text='门户']";
 
-	public String MainPage_Search_Id = "com.android.ayplatform."+type+":id/workbench_head_edit";
+	public String MainPage_Search_Id = "com.android.ayplatform." +type+ ":id/workbench_head_edit";
+	public String Protal_Search_Id = "com.android.ayplatform"+type+":id/actionFind";
 
 	//主页面左上个头像->个人信息菜单
 	public String MainPage_preData_Xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.view.View";
@@ -87,8 +89,8 @@ public class TestInfo {
 	public String Friends_Edit_Back_Id = "com.android.ayplatform:id/back";
 
 	//定位
-	public String Friends_Location_Confirm = "com.android.ayplatform"+type+":id/head_right_doing";
-	public String Friends_Location_Back = "com.android.ayplatform"+type+":id/back";
+	public String Friends_Location_Confirm = "com.android.ayplatform" +type+ ":id/head_right_doing";
+	public String Friends_Location_Back = "com.android.ayplatform" +type+ ":id/back";
 
 	//我的弹窗
 	public String MyInfo_Tag_Message_Xpath = "//android.widget.TextView[@text='消息提醒']";
@@ -112,11 +114,11 @@ public class TestInfo {
 	public String PreData_Back_Id = "com.android.ayplatform:id/back";
 
 	//账号与安全
-//	public String PreData_AS_AccountChange_Id = "com.android.ayplatform."+type+":id/ayprivate_switch_account_tv";
-	public String PreData_as_CompanyChange_Id = "com.android.ayplatform."+type+":id/ayprivate_switch_ent_tv";
+//	public String PreData_AS_AccountChange_Id = "com.android.ayplatform." +type+ ":id/ayprivate_switch_account_tv";
+	public String PreData_as_CompanyChange_Id = "com.android.ayplatform." +type+ ":id/ayprivate_switch_ent_tv";
 
 	//流程提交
-	public String WorkFlow_Send_Id = "com.android.ayplatform."+type+":id/flow_detail_submit_Button";
+	public String WorkFlow_Send_Id = "com.android.ayplatform." +type+ ":id/flow_detail_submit_Button";
 	//流程保存
 	public String WordFlow_Save_Id = "com.android.ayplatform:id/flow_detail_save_Button";
 
@@ -130,20 +132,20 @@ public class TestInfo {
 	public String WorkFlow_Advice_Id = "com.android.ayplatform:id/slave_add_TextView";
 
 	//启聊
-	public String QiLiao_CreatGroup_Id = "com.android.ayplatform."+type+":id/create_group";
+	public String QiLiao_CreatGroup_Id = "com.android.ayplatform." +type+ ":id/create_group";
 	public String QiLiao_Chat_Xpath = "//android.widget.TextView[@text='会话']";
 	public String QiLiao_MailList_Xpath = "//android.widget.TextView[@text='通讯录']";
 
 	//对话页
-	public String QiLiao_profile_Id = "com.android.ayplatform."+type+":id/chat_action_btn";
-	public String QiLiao_Back_Id = "com.android.ayplatform."+type+":id/back";
+	public String QiLiao_profile_Id = "com.android.ayplatform." +type+ ":id/chat_action_btn";
+	public String QiLiao_Back_Id = "com.android.ayplatform." +type+ ":id/back";
 
-	public String QiLiao_VoiceSwitch_Id = "com.android.ayplatform."+type+":id/rc_voice_toggle";
-	public String QiLiao_Emoticon_Id = "com.android.ayplatform."+type+":id/rc_emoticon_toggle";
-	public String QiLiao_More = "com.android.ayplatform."+type+":id/rc_plugin_toggle";
+	public String QiLiao_VoiceSwitch_Id = "com.android.ayplatform." +type+ ":id/rc_voice_toggle";
+	public String QiLiao_Emoticon_Id = "com.android.ayplatform." +type+ ":id/rc_emoticon_toggle";
+	public String QiLiao_More = "com.android.ayplatform." +type+ ":id/rc_plugin_toggle";
 
 	//说话
-	public String QiLiao_Talk_Id = "com.android.ayplatform"+type+":id/rc_audio_input_toggle";
+	public String QiLiao_Talk_Id = "com.android.ayplatform" +type+ ":id/rc_audio_input_toggle";
 
 	public String QiLaio_More_pic_Xpath = "//android.widget.TextView[@text='图片']";
 
@@ -152,10 +154,10 @@ public class TestInfo {
 	public String QiLiao_More_Money_Xpath = "//android.widget.TextView[@text='红包']";
 
 	//签到相机
-	public String Sign_camera_shot_Id = "com.android.ayplatform"+type+":id/activity_work_camera_sgin_submit";
-	public String Sign_camera_switch_Id ="com.android.ayplatform"+type+":id/view_camera_head_right";
-	public String Sign_camera_flash_Id = "com.android.ayplatform"+type+":id/view_camera_head_left";
-	public String Sign_camera_location_Id = "com.android.ayplatform"+type+":id/activity_work_camera_sgin_address";
+	public String Sign_camera_shot_Id = "com.android.ayplatform" +type+ ":id/activity_work_camera_sgin_submit";
+	public String Sign_camera_switch_Id ="com.android.ayplatform" +type+ ":id/view_camera_head_right";
+	public String Sign_camera_flash_Id = "com.android.ayplatform" +type+ ":id/view_camera_head_left";
+	public String Sign_camera_location_Id = "com.android.ayplatform" +type+ ":id/activity_work_camera_sgin_address";
 
 	//搜索
 	public String Search_main_app_Xpath = "//android.widget.TextView[@text='应用']";
@@ -163,13 +165,13 @@ public class TestInfo {
 	public String Search_main_man_Xpath = "//android.widget.TextView[@text='同事']";
 
 	//-筛选
-	public String Search_main_filter_bottom = "com.android.ayplatform"+type+":id/fragment_workbench_search_result_filter";
+	public String Search_main_filter_bottom = "com.android.ayplatform" +type+ ":id/fragment_workbench_search_result_filter";
 	
 	
-	//public String Search_main_input_Id = "com.android.ayplatform"+type+":id/filter_edit";
+	//public String Search_main_input_Id = "com.android.ayplatform" +type+ ":id/filter_edit";
 	//public String Search_main_input_Id = "//android.widget.EditText[@text='输入搜索内容']";
-	public String Search_mian_cancel_Id = "com.android.ayplatform"+type+":id/activity_cancel_tv";
-	public String Search_mian_back_Id ="com.android.ayplatform"+type+":id/activity_back_iv";
+	public String Search_mian_cancel_Id = "com.android.ayplatform" +type+ ":id/activity_cancel_tv";
+	public String Search_mian_back_Id ="com.android.ayplatform" +type+ ":id/activity_back_iv";
 
 	//消息中心
 	public String Message_main_assign_Xpath = "//android.widget.TextView[@text='工作交办']";
@@ -179,7 +181,10 @@ public class TestInfo {
 	public String Message_main_SM_Xpath = "//android.widget.TextView[@text='系统消息']";
 	public String Message_main_MC_Xpath ="//android.widget.TextView[@text='我评论的']";
 
-	public String Message_back_Id = "com.android.ayplatform"+type+":id/back";
+	public String Message_back_Id = "com.android.ayplatform" +type+ ":id/back";
+
+	//应用->列表->新建 release
+	public String AppCenter_createNewWorkByAppList_Id = "com.android.ayplatform" +type+ ":id/activity_info_new";
 
 
 }

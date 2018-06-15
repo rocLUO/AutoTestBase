@@ -11,5 +11,7 @@
 	<classpathentry kind="lib" path="E:/dev soft/java-client-4.1.2.jar" sourcepath="F:/mavenFile/io/appium/java-client/4.1.2/java-client-4.1.2-sources.jar"/>
 	<classpathentry kind="lib" path="E:/dev soft/jxl.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi-3"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

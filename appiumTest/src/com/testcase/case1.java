@@ -151,7 +151,7 @@ public class case1 extends TestInfo {
 		return time;
 	}
 
-	// 截图
+	// 截图.
 	// snapshot((TakesScreenshot)driver);
 	public static void snapshot() {
 		String currentpath = System.getProperty("user.dir");// get current work
@@ -211,7 +211,7 @@ public class case1 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Click Fail");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -223,7 +223,7 @@ public class case1 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Click Fail");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -245,7 +245,7 @@ public class case1 extends TestInfo {
 
 			AppBase.textPrint("input fail!");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 
 		}
 	}

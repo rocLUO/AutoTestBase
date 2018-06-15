@@ -165,7 +165,7 @@ public class case2 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Check Fail!");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 
 	}
@@ -178,7 +178,7 @@ public class case2 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Check Fail!");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -190,7 +190,7 @@ public class case2 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Click Fail");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -202,7 +202,7 @@ public class case2 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Click Fail");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -216,7 +216,7 @@ public class case2 extends TestInfo {
 			} catch (Error e) {
 				AppBase.textPrint("finding Element Fail");			e.printStackTrace();
 				e.printStackTrace();
-				AppBase.snapshot();
+//				AppBase.snapshot();
 			}
 			Thread.sleep(1000);// 每隔1秒执行查找
 
@@ -233,7 +233,7 @@ public class case2 extends TestInfo {
 			} catch (Error e) {
 				AppBase.textPrint("finding Element Fail");
 				e.printStackTrace();
-				AppBase.snapshot();
+//				AppBase.snapshot();
 			}
 			Thread.sleep(1000);
 		}
@@ -249,7 +249,7 @@ public class case2 extends TestInfo {
 			} catch (Error e) {
 				AppBase.textPrint("finding Element Fail");
 				e.printStackTrace();
-				AppBase.snapshot();
+//				AppBase.snapshot();
 			}
 			Thread.sleep(1000);
 		}
@@ -308,7 +308,7 @@ public class case2 extends TestInfo {
 			AppBase.textPrint("login Act Fail!");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 
 	}
@@ -321,7 +321,7 @@ public class case2 extends TestInfo {
 			// TODO Auto-generated catch block
 			AppBase.textPrint("screeen shot Fail!");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 
@@ -330,7 +330,7 @@ public class case2 extends TestInfo {
 		} catch (Error e) {
 			AppBase.textPrint("Act is preform succesee!");
 			e.printStackTrace();
-			AppBase.snapshot();
+//			AppBase.snapshot();
 		}
 	}
 

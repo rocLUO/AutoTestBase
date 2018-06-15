@@ -12,6 +12,7 @@
  */
 package com.appium.TestBase;
 
+import io.appium.java_client.MobileBy;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.Reporter;
@@ -19,13 +20,17 @@ import org.testng.annotations.AfterClass;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 import io.appium.java_client.android.AndroidDriver;
 
+import static org.testng.Assert.expectThrows;
 import static org.testng.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Driver;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -36,6 +41,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidElement;
 
 public class AppBase extends TestInfo {
 	// intput text
@@ -108,6 +115,98 @@ public class AppBase extends TestInfo {
 		}
 	}
 
+	/**
+	 *
+	 * 功能描述: 使用uiautomator双重定位,参考使用resource-id与index
+	 *
+	 * @param: Id,index
+	 *
+	 * @auther: luopeng
+	 *
+	 * @date: 2018/6/1 15:45
+	 */
+	public static void ClickByAndroidToIdAndIndex(String Id, int index, AppiumDriver Driver) {
+		try {
+			AppBase.textPrint("Click The Element For Id&index -> " + Id + " and " + index);
+			Driver.findElement(
+					MobileBy.AndroidUIAutomator("new UiSelector().resource-id(" + Id + ").index(" + index + ")"))
+					.click();
+		} catch (Error e) {
+			AppBase.textPrint("Click Fail");
+			e.printStackTrace();
+			screenSnap(Driver);
+		}
+	}
+
+	/**
+	 *
+	 * 功能描述: 使用uiautomator双重定位,参考使用resource-id与className
+	 *
+	 * @param: Id,className
+	 *
+	 * @auther: luopeng
+	 *
+	 * @date: 2018/6/1 15:46
+	 */
+	public static void ClickByAndroidToIdAndClassName(String Id, String ClassName, AppiumDriver Driver) {
+		try {
+			AppBase.textPrint("Click The Element For id&ClassName ->" + Id + " and " + ClassName);
+			Driver.findElement(MobileBy
+					.AndroidUIAutomator("new UiSelector().resource-id(" + Id + ").className(" + ClassName + ")"))
+					.click();
+		} catch (Error e) {
+			AppBase.textPrint("Click Fail");
+			e.printStackTrace();
+			screenSnap(Driver);
+		}
+	}
+
+	/**
+	 *
+	 * 功能描述: 使用uiautomator双重定位,参考使用className与index
+	 *
+	 * @param: className,index
+	 *
+	 * @auther: luopeng
+	 *
+	 * @date: 2018/6/1 15:52
+	 */
+	public static void ClickByAndroidToClassNameAndIndex(String ClassName, int index, AppiumDriver Driver) {
+		try {
+			AppBase.textPrint("Click The Element For ClassNmae&index ->" + ClassName + " and " + index);
+			Driver.findElement(
+					MobileBy.AndroidUIAutomator("new UiSelector().className(" + ClassName + ").index(" + index + ")"))
+					.click();
+		} catch (Error e) {
+			AppBase.textPrint("Click Fail");
+			e.printStackTrace();
+			screenSnap(Driver);
+		}
+	}
+
+	/**
+	 *
+	 * 功能描述: 使用uiautomator双重定位,参考使用className与instance
+	 *
+	 * @param: className,instance
+	 *
+	 * @auther: luopeng
+	 *
+	 * @date: 2018/6/1 16:22
+	 */
+	public static void ClickByAndroidToInstanceAndClassName(int instance, String ClassName, AppiumDriver Driver) {
+		try {
+			AppBase.textPrint("Click The Element For instance&Text ->" + instance + " and " + ClassName);
+			Driver.findElement(MobileBy
+					.AndroidUIAutomator("new UiSelector().instance(" + instance + ").className(" + ClassName + ")"))
+					.click();
+		} catch (Error e) {
+			AppBase.textPrint("Click Fail");
+			e.printStackTrace();
+			screenSnap(Driver);
+		}
+	}
+
 	public static void InPutById(String Id, String Text, AppiumDriver Driver) {
 		try {
 			AppBase.textPrint("input text For Id! ->" + Id);
@@ -123,7 +222,7 @@ public class AppBase extends TestInfo {
 		}
 	}
 
-	public void InPutByXpath(String Xpath, String Text, AppiumDriver Driver) {
+	public static void InPutByXpath(String Xpath, String Text, AppiumDriver Driver) {
 		try {
 			AppBase.textPrint("input text For Id! ->" + Xpath);
 			Driver.findElementById(Xpath).sendKeys(Text);
@@ -152,6 +251,14 @@ public class AppBase extends TestInfo {
 
 	public static void swipXY(int X1, int Y1, int X2, int Y2, AppiumDriver Driver) throws InterruptedException {
 		Driver.swipe(X1, Y1, X2, Y2, 500);
+	}
+
+	public static void swipToDown(AppiumDriver Driver) { Driver.swipe(500, 250, 500, 1750, 800);
+
+	}
+
+	public static void swipToUp(AppiumDriver Driver) {
+		Driver.swipe(500, 1750, 500, 250, 800);
 	}
 
 	/*
@@ -334,4 +441,5 @@ public class AppBase extends TestInfo {
 
 		}
 	}
+
 }
