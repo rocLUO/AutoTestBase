@@ -21,8 +21,8 @@ public class testExmple {
 	static String clickId = "clickId()";
 	static String clickXpath = "clickXpath()";
 	static String sleep = "sleep()";
-	static String inputById = "inputById";
-	static String inputByXpath = "inputXpath";
+	static String inPutById = "inPutById";
+	static String inPutByXpath = "inputXpath";
 	static String clickXY = "clickXY";
 
 

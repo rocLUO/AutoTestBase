@@ -16,6 +16,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import com.appium.TestBase.AppBase;
+
+import io.appium.java_client.AppiumDriver;
+
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -72,7 +75,7 @@ public class ReadExcelPoi extends testExmple{
 	                System.out.println("测试用例ID===" + TS_ID + "测试名称是====" + CaseName + "操作方法是==" + Opertion + "测试数据是==" + Data);
 
 					if(Opertion == clickId){
-						return AppBase.ClickId(Data,driver);
+//						return AppBase.clickId(Data,Driver);
 					}else if(Opertion == clickXpath){
 						
 					}

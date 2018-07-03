@@ -74,7 +74,7 @@ public class createNewWork_pre extends TestInfo {
 	public void NewWork() throws InterruptedException {
 
 		Thread.sleep(3000);
-		AppBase.ClickXY(747, 1944, "点击->应用", driver);
+		AppBase.clickXY(747, 1944, "点击->应用", driver);
 		Thread.sleep(3000);
 		// 上划
 		AppBase.swipXY(524, 1862, 524, 217, driver);
@@ -86,14 +86,14 @@ public class createNewWork_pre extends TestInfo {
 		while (i < 1) {
 			try {
 				Thread.sleep(2000);
-				AppBase.ClickXpath("//android.widget.TextView[@text='autotest']", driver);
+				AppBase.clickXpath("//android.widget.TextView[@text='autotest']", driver);
 
 				Thread.sleep(2000);
 				// 点击工作
-				AppBase.ClickXY(338, 404, "点击工作", driver);
+				AppBase.clickXY(338, 404, "点击工作", driver);
 
 				Thread.sleep(3000);
-				AppBase.ClickId("com.android.ayplatform.pre:id/activity_info_new", driver);
+				AppBase.clickId("com.android.ayplatform.pre:id/activity_info_new", driver);
 				Thread.sleep(2000);
 
 				AppBase.excuteAdbShell("adb shell ime set io.appium.android.ime/.UnicodeIME", driver);
@@ -104,11 +104,11 @@ public class createNewWork_pre extends TestInfo {
 
 				Thread.sleep(3000);
 				// 添加接收人
-				AppBase.ClickId("com.android.ayplatform.pre:id/org_add_user_imageView", driver);
+				AppBase.clickId("com.android.ayplatform.pre:id/org_add_user_imageView", driver);
 
 				Thread.sleep(3000);
-				// ClickXpath("//android.widget.TextView[@text='测试部门1']");
-				AppBase.ClickXpath("//android.widget.TextView[@text='九五之尊']", driver);
+				// clickXpath("//android.widget.TextView[@text='测试部门1']");
+				AppBase.clickXpath("//android.widget.TextView[@text='九五之尊']", driver);
 				// //上划
 				// Thread.sleep(3000);
 				// swipXY(536, 1805, 565, 341);
@@ -118,18 +118,18 @@ public class createNewWork_pre extends TestInfo {
 				// swipXY(536, 1805, 565, 341);
 
 				Thread.sleep(3000);
-				AppBase.ClickXpath("//android.widget.TextView[@text='111']", driver);
+				AppBase.clickXpath("//android.widget.TextView[@text='111']", driver);
 
 				Thread.sleep(3000);
 				// 确定
-				AppBase.ClickId("com.android.ayplatform.pre:id/orgstructure_colleagues_display_submit", driver);
+				AppBase.clickId("com.android.ayplatform.pre:id/orgstructure_colleagues_display_submit", driver);
 
 				Thread.sleep(3000);
 				//提交
-				//				ClickId("com.android.ayplatform.pre:id/flow_detail_submit_Button");
+				//				clickId("com.android.ayplatform.pre:id/flow_detail_submit_Button");
 
 				//保存
-				AppBase.ClickId("com.android.ayplatform.pre:id/flow_detail_save_Button", driver);
+				AppBase.clickId("com.android.ayplatform.pre:id/flow_detail_save_Button", driver);
 				Thread.sleep(1000);
 				AppBase.Back(driver);
 				Thread.sleep(1000);

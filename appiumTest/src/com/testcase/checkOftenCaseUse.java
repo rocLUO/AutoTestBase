@@ -11,18 +11,10 @@ package com.testcase;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 
-import com.method.SelectAction;
-import io.appium.java_client.android.AndroidDeviceActionShortcuts;
-import io.appium.java_client.android.AndroidKeyCode;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import com.caseDebug.C2_1_5;
+
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -31,15 +23,13 @@ import org.testng.annotations.Test;
 
 import com.appium.TestBase.AppBase;
 import com.appium.TestBase.TestInfo;
-import com.method.openAppList;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
-import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
+import com.caseDebug.*;
 
-public class checkOftenCaseUse extends TestInfo {
+public class CheckOftenCaseUse extends TestInfo {
 
     private static AppiumDriver driver;
 
@@ -62,61 +52,21 @@ public class checkOftenCaseUse extends TestInfo {
         cap.setCapability("noSign", true);
         /*
          * 中文输入,隐藏键盘启动 capabilities.setCapability("unicodeKeyboard", "True");
-         * capabilities.setCapability("resetKeyboard", "True");
+         * capabilities.setCapability("resetKyboard", "True");
          */
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 
     }
 
-    @Test(description = "test work")
-    public void case_test() throws InterruptedException {
-
-        try {
-            Thread.sleep(3000);
-            AppBase.ClickId(Protal_Search_Id, driver);
-            Thread.sleep(2000);
-            AppBase.ClickXpath("//android.widget.TextView[@text='同事']", driver);
-            Thread.sleep(3000);
-            // 切换输入法
-            AppBase.excuteAdbShell("adb shell ime set com.sohu.inputmethod.sogou/.SogouIME", driver);
-            // 点击搜索框
-            AppBase.ClickId("com.android.ayplatform"+type+":id/filter_edit", driver);
-            // 搜索同事
-            Thread.sleep(3000);
-            ((AndroidDeviceActionShortcuts) driver).pressKeyCode(AndroidKeyCode.KEYCODE_1);
-            ((AndroidDeviceActionShortcuts) driver).pressKeyCode(AndroidKeyCode.KEYCODE_1);
-            ((AndroidDeviceActionShortcuts) driver).pressKeyCode(AndroidKeyCode.KEYCODE_1);
-            Thread.sleep(1000);
-            ((AndroidDeviceActionShortcuts) driver).pressKeyCode(AndroidKeyCode.ENTER);
-            Thread.sleep(1000);
-            ((AndroidDeviceActionShortcuts) driver).pressKeyCode(AndroidKeyCode.ENTER);
-            // 点击 筛选
-            Thread.sleep(3000);
-            // 给搜索到的同事
-            AppBase.ClickXpath("//android.widget.TextView[@text='111']", driver);
-            Thread.sleep(3000);
-            // 点击-发送消息(xpath/id不可用)
-            AppBase.ClickXY(804, 1936, "点击发送消息", driver);
-            Thread.sleep(3000);
-            // 切换输入法
-            AppBase.excuteAdbShell("adb shell ime set io.appium.android.ime/.UnicodeIME", driver);
-            // 点击输入框
-            AppBase.ClickId("com.android.ayplatform"+type+":id/rc_edit_text", driver);
-            Thread.sleep(2000);
-            AppBase.excuteAdbShell("adb shell ime set io.appium.android.ime/.UnicodeIME", driver);
-            Thread.sleep(1000);
-            AppBase.InPutById("com.android.ayplatform"+type+":id/rc_edit_text", "testtest", driver);
-            // 发送
-            Thread.sleep(2000);
-            AppBase.ClickId("com.android.ayplatform"+type+":id/rc_send_toggle", driver);
-            Thread.sleep(3000);
-            AppBase.Back(driver);
-        } catch (Error e) {
-            AppBase.screenSnap(driver);
-        }
-
-        driver.closeApp();
-        Thread.sleep(2000);
+    
+    @Test(description = "通讯录-我的群组")
+    public void case2_1_5() throws InterruptedException {
+        C2_1_5.case2_1_5(driver);
+    }
+    
+    @Test(description = "启聊导航栏切换与会话/通讯录切换")
+    public void case2_1_1() throws InterruptedException {
+    	C2_1_1.case2_1_1(driver);
     }
 
     @AfterClass
@@ -124,5 +74,40 @@ public class checkOftenCaseUse extends TestInfo {
         AppBase.textPrint("test end!");
         driver.quit();
 
+    }
+    
+    public static void newContent() throws InterruptedException {
+
+        AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,driver);
+        Thread.sleep(3000);
+
+        //点击工作圈
+        AppBase.clickId("com.android.ayplatform"+ type +":id/item_message_label",driver);
+        Thread.sleep(2000);
+
+        //点击发布
+        AppBase.clickId("com.android.ayplatform"+ type +":id/doing",driver);
+        Thread.sleep(2000);
+
+    }
+    
+    public static void sendComment() throws InterruptedException {
+        AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,driver);
+        Thread.sleep(3000);
+
+        //点击工作圈
+        AppBase.clickId("com.android.ayplatform"+ type +":id/item_message_label",driver);
+        Thread.sleep(2000);
+
+        //点击 评论
+        AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[3]",driver);
+        Thread.sleep(2000);
+
+        //输入字符
+        AppBase.inPutById("com.android.ayplatform"+ type +":id/input_box_view_input_sms","testtest",driver);
+        Thread.sleep(2000);
+        
+        AppBase.clickId("com.android.ayplatform"+ type +":id/input_box_view_send_sms",driver);
+        Thread.sleep(2000);
     }
 }

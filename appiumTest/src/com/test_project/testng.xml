@@ -2,7 +2,7 @@
 <suite name="test" parallel="true">
 	<test name="test" preserver-order="true">
 		<classes>
-			<class name="com.test_project.test_pre0502" /><!--测试类所在包-->
+			<class name="com.test_project.Test_pre0502" /><!--测试类所在包-->
 			<method>
 				<incloud name="case2_1_6" /><!--被测类中的方法名 -->
 				<incloud name="case2_1_7" />

@@ -76,10 +76,10 @@ public class createNewWork_release extends TestInfo {
 		while (1 < 2) {
 			try {
 				Thread.sleep(3000);
-				AppBase.ClickId("com.android.ayplatform.release:id/click_img", driver);
+				AppBase.clickId("com.android.ayplatform.release:id/click_img", driver);
 
 				Thread.sleep(3000);
-				AppBase.ClickXpath("//android.widget.TextView[@text='想喝花雕么']", driver);
+				AppBase.clickXpath("//android.widget.TextView[@text='想喝花雕么']", driver);
 
 				Thread.sleep(3000);
 				driver.findElementByXPath(
@@ -88,11 +88,11 @@ public class createNewWork_release extends TestInfo {
 
 				Thread.sleep(3000);
 				// 添加接收人
-				AppBase.ClickId("com.android.ayplatform.release:id/org_add_user_imageView", driver);
+				AppBase.clickId("com.android.ayplatform.release:id/org_add_user_imageView", driver);
 
 				Thread.sleep(3000);
-				// ClickXpath("//android.widget.TextView[@text='测试部门1']");
-				AppBase.ClickXpath("//android.widget.TextView[@text='九五之尊']", driver);
+				// clickXpath("//android.widget.TextView[@text='测试部门1']");
+				AppBase.clickXpath("//android.widget.TextView[@text='九五之尊']", driver);
 				// //上划
 				// Thread.sleep(3000);
 				// swipXY(536, 1805, 565, 341);
@@ -102,14 +102,14 @@ public class createNewWork_release extends TestInfo {
 				// swipXY(536, 1805, 565, 341);
 
 				Thread.sleep(1000);
-				AppBase.ClickXpath("//android.widget.TextView[@text='111']", driver);
+				AppBase.clickXpath("//android.widget.TextView[@text='111']", driver);
 
 				Thread.sleep(1000);
 				// 确定
-				AppBase.ClickId("com.android.ayplatform.release:id/orgstructure_colleagues_display_submit", driver);
+				AppBase.clickId("com.android.ayplatform.release:id/orgstructure_colleagues_display_submit", driver);
 
 				Thread.sleep(3000);
-				AppBase.ClickId("com.android.ayplatform.release:id/flow_detail_submit_Button", driver);
+				AppBase.clickId("com.android.ayplatform.release:id/flow_detail_submit_Button", driver);
 
 				i++;
 			} catch (Error e) {

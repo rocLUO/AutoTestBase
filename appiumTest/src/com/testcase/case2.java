@@ -43,7 +43,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class case2 extends TestInfo {
+public class Case2 extends TestInfo {
 
 	// 配合android键盘输入 driver 切换为 AndroidDriver
 	 private static AppiumDriver driver;
@@ -100,9 +100,9 @@ public class case2 extends TestInfo {
 //		changeAccount();
 
 		waitForXpath("待办工作", MainPage_Tag_Already_Xpath);
-		ClickXpath(MainPage_NewWork_Id);
+		clickXpath(MainPage_NewWork_Id);
 
-		ClickXpath("//android.widget.TextView[@text='想喝花雕么']");
+		clickXpath("//android.widget.TextView[@text='想喝花雕么']");
 
 		// 等待流程标题控件
 		waitForId("com.android.ayplatform.release:id/title");
@@ -116,10 +116,10 @@ public class case2 extends TestInfo {
 		driver.findElementByXPath("//android.widget.LinearLayout[3]").sendKeys("123123");
 
 		// 点击添加人员
-		ClickId("com.android.ayplatform.release:id/org_add_user_imageView");
+		clickId("com.android.ayplatform.release:id/org_add_user_imageView");
 
 		// 人员组织搜索页面-搜索
-		ClickId("com.android.ayplatform.release:id/workbench_head_edit");
+		clickId("com.android.ayplatform.release:id/workbench_head_edit");
 
 		// 键盘事件--成员目标 test-1
 		// 如果调试失败,建议使用坐标点击替代
@@ -138,13 +138,13 @@ public class case2 extends TestInfo {
 		driver.pressKeyCode(66);
 		*/
 		// 点击人名--只有一个结果
-		ClickId("com.android.ayplatform.release:id/item_orgstructure_colleague_name");
+		clickId("com.android.ayplatform.release:id/item_orgstructure_colleague_name");
 
 		// 点击提交
-		ClickId("com.android.ayplatform.release:id/org_search_display_submit");
+		clickId("com.android.ayplatform.release:id/org_search_display_submit");
 
 		// 提交
-		ClickId(WorkFlow_Send_Id);
+		clickId(WorkFlow_Send_Id);
 	}
 
 	@AfterClass
@@ -182,7 +182,7 @@ public class case2 extends TestInfo {
 		}
 	}
 
-	public void ClickXpath(String Xpath) {
+	public void clickXpath(String Xpath) {
 		try {
 			AppBase.textPrint("Click The Element For Xpath ->" + Xpath);
 			driver.findElementByXPath(Xpath).click();
@@ -194,7 +194,7 @@ public class case2 extends TestInfo {
 		}
 	}
 
-	public void ClickId(String Id) {
+	public void clickId(String Id) {
 		try {
 			AppBase.textPrint("Click The Element For Id -> " +Id);
 			driver.findElementById(Id).click();
@@ -259,16 +259,16 @@ public class case2 extends TestInfo {
 		AppBase.textPrint("Account Change Act start!");
 
 		try {
-			ClickXpath(MainPage_preData_Xpath);
+			clickXpath(MainPage_preData_Xpath);
 			waitForXpath("账号与安全", MyInfo_Tag_AccountSecurity_Xpath);
 
-			ClickXpath(MyInfo_Tag_AccountSecurity_Xpath);
+			clickXpath(MyInfo_Tag_AccountSecurity_Xpath);
 			waitForId(PreData_AS_AccountChange_Id);
 
-			ClickId(PreData_AS_AccountChange_Id);
+			clickId(PreData_AS_AccountChange_Id);
 			// 切换账号
 			waitForXpath(ForAccountName, "//android.widget.TextView[@text='" + ForAccountName + "']");
-			ClickXpath("//android.widget.TextView[@text='" + ForAccountName + "']");
+			clickXpath("//android.widget.TextView[@text='" + ForAccountName + "']");
 			// 回到个人信息页,关闭个人信息弹窗
 			waitForXpath("账号与安全", MyInfo_Tag_AccountSecurity_Xpath);
 			driver.navigate().back();

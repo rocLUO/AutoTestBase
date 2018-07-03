@@ -11,7 +11,7 @@ import io.appium.java_client.AppiumDriver;
  *
  * Description: 从门户快捷入口打开应用列表,从应用打开门户列表
  */
-public class openAppList extends TestInfo{
+public class OpenAppList extends TestInfo{
 
     /**
      * @param:
@@ -25,7 +25,7 @@ public class openAppList extends TestInfo{
     public static void viewWrokListByProtal(AppiumDriver Driver) throws InterruptedException {
 
         try{
-            AppBase.ClickXpath(MainPage_Bar_Protal_Xpath, Driver);
+            AppBase.clickXpath(MainPage_Bar_Protal_Xpath, Driver);
             Thread.sleep(2000);
 
             //默认测试门户 快捷入口在下方
@@ -33,7 +33,7 @@ public class openAppList extends TestInfo{
             Thread.sleep(2000);
 
             //点击 快捷入口 列表页 默认第三个入口
-            AppBase.ClickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[3]", Driver);
+            AppBase.clickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[3]", Driver);
             Thread.sleep(2000);
 
 
@@ -56,7 +56,7 @@ public class openAppList extends TestInfo{
     public static void viewWorkListByAppCeneter(AppiumDriver Driver) throws InterruptedException {
 
         try {
-            AppBase.ClickXpath("MainPage_Bar_App_Xpath", Driver);
+            AppBase.clickXpath("MainPage_Bar_App_Xpath", Driver);
             Thread.sleep(3000);
 
             //默认autotest 应用在最下方
@@ -64,11 +64,11 @@ public class openAppList extends TestInfo{
             Thread.sleep(2000);
 
             //点击应用 autotest
-            AppBase.ClickXpath("//android.widget.TextView[@text='autotest']", Driver);
+            AppBase.clickXpath("//android.widget.TextView[@text='autotest']", Driver);
             Thread.sleep(2000);
 
             //点击实例 进入列表页
-            AppBase.ClickId("com.android.ayplatform"+type+":id/appcenter_myapp_detail_children_text", Driver);
+            AppBase.clickId("com.android.ayplatform"+type+":id/appcenter_myapp_detail_children_text", Driver);
         } catch (Error e) {
             e.printStackTrace();
         }

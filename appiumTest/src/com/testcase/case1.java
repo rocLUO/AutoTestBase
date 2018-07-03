@@ -42,7 +42,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.appium.TestBase.AppBase;
 import com.appium.TestBase.TestInfo;
 
-public class case1 extends TestInfo {
+public class Case1 extends TestInfo {
 	private static AppiumDriver driver;
 
 	@BeforeClass
@@ -76,54 +76,54 @@ public class case1 extends TestInfo {
 		try {
 
 			Thread.sleep(3000);
-			ClickId(MainPage_NewWork_Id);
+			clickId(MainPage_NewWork_Id);
 
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='工作协同']");
+			clickXpath("//android.widget.TextView[@text='工作协同']");
 			Thread.sleep(3000);
-			ClickId("com.android.ayplatform:id/activity_flow_new");
+			clickId("com.android.ayplatform:id/activity_flow_new");
 			Thread.sleep(3000);
 			driver.findElementByXPath("//android.widget.EditText[@text='点击输入内容']").sendKeys("testcase");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[3]");
+			clickXpath("//android.widget.LinearLayout[3]");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='协同告知']");
+			clickXpath("//android.widget.TextView[@text='协同告知']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='完成']");
+			clickXpath("//android.widget.TextView[@text='完成']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[4]");
+			clickXpath("//android.widget.LinearLayout[4]");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='一般性事务']");
+			clickXpath("//android.widget.TextView[@text='一般性事务']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='完成']");
+			clickXpath("//android.widget.TextView[@text='完成']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[5]");
+			clickXpath("//android.widget.LinearLayout[5]");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='技术口']");
+			clickXpath("//android.widget.TextView[@text='技术口']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='确定']");
+			clickXpath("//android.widget.TextView[@text='确定']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[6]");
+			clickXpath("//android.widget.LinearLayout[6]");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='其他']");
+			clickXpath("//android.widget.TextView[@text='其他']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='完成']");
+			clickXpath("//android.widget.TextView[@text='完成']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[7]");
+			clickXpath("//android.widget.LinearLayout[7]");
 			Thread.sleep(3000);
-			InPutById("com.android.ayplatform:id/activity_textui_edt_content", "123123");
+			inPutById("com.android.ayplatform:id/activity_textui_edt_content", "123123");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.TextView[@text='完成']");
+			clickXpath("//android.widget.TextView[@text='完成']");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.LinearLayout[9]");
+			clickXpath("//android.widget.LinearLayout[9]");
 			Thread.sleep(3000);
-			ClickXpath("//android.widget.Button[@text='完成']");
+			clickXpath("//android.widget.Button[@text='完成']");
 			Thread.sleep(3000);
 			driver.swipe(500, 1634, 500, 144, 2000);
 			Thread.sleep(2000);
-			ClickId("com.android.ayplatform:id/org_add_user_imageView");
+			clickId("com.android.ayplatform:id/org_add_user_imageView");
 			Thread.sleep(3000);
-			ClickId("com.android.ayplatform:id/workbench_head_edit");
+			clickId("com.android.ayplatform:id/workbench_head_edit");
 
 			// driver.swipe(, starty, endx, endy, duration);
 		} catch (Error e) {
@@ -203,7 +203,7 @@ public class case1 extends TestInfo {
 		}
 	}
 
-	public void ClickId(String Id) {
+	public void clickId(String Id) {
 		try {
 			AppBase.textPrint("Click The Element For Id -> " + Id);
 			driver.findElementById(Id).click();
@@ -215,7 +215,7 @@ public class case1 extends TestInfo {
 		}
 	}
 
-	public void ClickXpath(String Xpath) {
+	public void clickXpath(String Xpath) {
 		try {
 			AppBase.textPrint("Click The Element For Xpath ->" + Xpath);
 			driver.findElementByXPath(Xpath).click();
@@ -235,7 +235,7 @@ public class case1 extends TestInfo {
 		driver.navigate().back();
 	}
 
-	public void InPutById(String Id, String Text) {
+	public void inPutById(String Id, String Text) {
 		try {
 			AppBase.textPrint("input text For Id! ->" + Id);
 			driver.findElementById(Id).sendKeys(Text);
@@ -284,7 +284,7 @@ public class case1 extends TestInfo {
 
 	}
 
-	public void ClickXY(int X, int Y, String explain) {
+	public void clickXY(int X, int Y, String explain) {
 
 		try {
 

@@ -55,11 +55,11 @@ public class demo3 {
 
 		Thread.sleep(3000);
 		// AppiumBase.clickText("最近处理");
-		AppBase.ClickXpath("//android.widget.TextView[@text='我发起的']", driver);
+		AppBase.clickXpath("//android.widget.TextView[@text='我发起的']", driver);
 		Thread.sleep(3000);
-		AppBase.ClickXpath("//android.widget.TextView[@text='待办工作']", driver);;
+		AppBase.clickXpath("//android.widget.TextView[@text='待办工作']", driver);;
 //		// 选择已办流程
-//		AppBase.ClickXpath("com.android.ayplatform:id/workbench_module_item1_content", driver);
+//		AppBase.clickXpath("com.android.ayplatform:id/workbench_module_item1_content", driver);
 		Thread.sleep(3000);
 		/*
 		 * driver.findElementByXPath(

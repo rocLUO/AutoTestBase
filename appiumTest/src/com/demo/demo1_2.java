@@ -49,19 +49,19 @@ public class demo1_2 extends oneSssion {
 	public static void case1_2() throws InterruptedException {
 
 		Thread.sleep(3000);
-		ClickXpath(TestInfo.MainPage_Bar_Discovery_Xpath); // switch Discovery bar
+		clickXpath(TestInfo.MainPage_Bar_Discovery_Xpath); // switch Discovery bar
 		Thread.sleep(3000);
 
-		ClickXpath("//android.widget.TextView[@text='工作圈']");
+		clickXpath("//android.widget.TextView[@text='工作圈']");
 		Thread.sleep(3000);
-		ClickId("com.android.ayplatform.release:id/doing"); // new
+		clickId("com.android.ayplatform.release:id/doing"); // new
 
 		Thread.sleep(2000);
 		clearId("com.android.ayplatform.release:id/activity_published_talking_et");
-		InPutById("com.android.ayplatform.release:id/activity_published_talking_et", "123456654321");
+		inPutById("com.android.ayplatform.release:id/activity_published_talking_et", "123456654321");
 
 		Thread.sleep(2000);
-		ClickId("com.android.ayplatform.release:id/head_right_doing"); // send
+		clickId("com.android.ayplatform.release:id/head_right_doing"); // send
 
 	}
 

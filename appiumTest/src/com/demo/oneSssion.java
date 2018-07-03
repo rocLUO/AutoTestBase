@@ -42,9 +42,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.appium.TestBase.AppBase;
 import com.appium.TestBase.TestInfo;
 
-import com.zhangzongchao.*;
-import com.zhangyiwen.*;
-
 /*
  *@author luopeng
  *Last_Update 2018年4月25日上午11:14:56
@@ -103,7 +100,7 @@ public class oneSssion extends TestInfo{
 
 	}
 
-	public static void InPutById(String Id, String Text) {
+	public static void inPutById(String Id, String Text) {
 		try {
 			AppBase.textPrint("input text For Id! ->" + Id);
 			driver.findElementById(Id).sendKeys(Text);
@@ -118,7 +115,7 @@ public class oneSssion extends TestInfo{
 		}
 	}
 
-	public void InPutByXpath(String Xpath, String Text) {
+	public void inPutByXpath(String Xpath, String Text) {
 		try {
 			AppBase.textPrint("input text For Id! ->" + Xpath);
 			driver.findElementById(Xpath).sendKeys(Text);
@@ -133,7 +130,7 @@ public class oneSssion extends TestInfo{
 		}
 	}
 
-	public void CheckXpath(String Xpath, String Text) {
+	public void checkXpath(String Xpath, String Text) {
 		try {
 			AppBase.textPrint("Check The Text For Xpath! ->" + Xpath);
 			assertEquals(driver.findElementByXPath(Xpath).getText(), Text);
@@ -146,7 +143,7 @@ public class oneSssion extends TestInfo{
 
 	}
 
-	public void CheckId(String Id, String Text) {
+	public void checkId(String Id, String Text) {
 		try {
 			AppBase.textPrint("check The Text For Id ->" + Id);
 			assertEquals(driver.findElementById(Id).getText(), Text);
@@ -158,7 +155,7 @@ public class oneSssion extends TestInfo{
 		}
 	}
 
-	public static void ClickXpath(String Xpath) {
+	public static void clickXpath(String Xpath) {
 		try {
 			AppBase.textPrint("Click The Element For Xpath ->" + Xpath);
 			driver.findElementByXPath(Xpath).click();
@@ -170,7 +167,7 @@ public class oneSssion extends TestInfo{
 		}
 	}
 
-	public static void ClickId(String Id) {
+	public static void clickId(String Id) {
 		try {
 			AppBase.textPrint("Click The Element For Id -> " + Id);
 			driver.findElementById(Id).click();
@@ -262,7 +259,7 @@ public class oneSssion extends TestInfo{
 	}
 
 	// ElementType only support input "Xpath" and "Id"
-	public void CheckFor(String ElementType, String ElementInfo) {
+	public void checkFor(String ElementType, String ElementInfo) {
 		if (ElementType == "Xpath") {
 			try {
 				if (driver.findElement(By.xpath(ElementInfo)).isDisplayed()) {
@@ -302,7 +299,7 @@ public class oneSssion extends TestInfo{
 	 *
 	 * "duration" how much time you want to press the phone
 	 */
-	public void TapClick(int fingers, WebElement element, int duration) throws InterruptedException {
+	public void tapClick(int fingers, WebElement element, int duration) throws InterruptedException {
 		driver.tap(fingers, element, duration);
 	}
 
@@ -313,7 +310,7 @@ public class oneSssion extends TestInfo{
 	 *
 	 * "duration" how much time you want to press the phone
 	 */
-	public void TapClickXY(int fingers, int X, int Y, int duration) throws InterruptedException {
+	public void tapClickXY(int fingers, int X, int Y, int duration) throws InterruptedException {
 
 		driver.tap(fingers, X, Y, duration);
 	}

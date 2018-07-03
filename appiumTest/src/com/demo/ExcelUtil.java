@@ -67,7 +67,7 @@ public class ExcelUtil {
         try {
             excelSheet = excelBook.getSheet(sheetName);
             row = excelSheet.getRow(rownum);
-            cell = row.getCell(cellnum, row.RETURN_BLANK_AS_NULL);
+//            cell = row.getCell(cellnum, row.RETURN_BLANK_AS_NULL);
             if (cell == null) {
                 cell = row.createCell(cellnum);
                 cell.setCellValue(result);

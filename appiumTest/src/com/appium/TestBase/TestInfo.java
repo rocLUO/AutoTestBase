@@ -17,7 +17,8 @@ package com.appium.TestBase;
  */
 public class TestInfo {
 
-	//手机参数设置
+
+	/*------------------------------手机公共参数----------------------------------*/
 	public String Platform = "Android";
 	public String PhoneCode = "MKJNW17C20005057";
 	public String ApkPackage = "com.android.ayplatform.release";
@@ -25,7 +26,7 @@ public class TestInfo {
 	public String Version = "8.0";
 
 	//before start method act
-	public static int waitTime = 60;
+	public static int waitTime = 5000;
 
 	//test lunch environment
 	public static String type = ".release";
@@ -36,6 +37,8 @@ public class TestInfo {
 
 	// change account name
 	public String ForAccountName = "";
+
+	/*------------------------------控件公共参数----------------------------------*/
 
 	//登录页
 	public String LoginPage_Id = "com.android.ayplatform:id/cardNumAuto";
@@ -132,9 +135,9 @@ public class TestInfo {
 	public String WorkFlow_Advice_Id = "com.android.ayplatform:id/slave_add_TextView";
 
 	//启聊
-	public String QiLiao_CreatGroup_Id = "com.android.ayplatform." +type+ ":id/create_group";
-	public String QiLiao_Chat_Xpath = "//android.widget.TextView[@text='会话']";
-	public String QiLiao_MailList_Xpath = "//android.widget.TextView[@text='通讯录']";
+	public static String QiLiao_CreatGroup_Id = "com.android.ayplatform." +type+ ":id/create_group";
+	public static String QiLiao_Chat_Xpath = "//android.widget.TextView[@text='会话']";
+	public static String QiLiao_MailList_Xpath = "//android.widget.TextView[@text='通讯录']";
 
 	//对话页
 	public String QiLiao_profile_Id = "com.android.ayplatform." +type+ ":id/chat_action_btn";

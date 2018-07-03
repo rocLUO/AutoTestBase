@@ -12,7 +12,7 @@ import io.appium.java_client.AppiumDriver;
  *
  * Description:从门户快捷入口新建实例,从应用新建实例
  */
-public class createWork extends TestInfo{
+public class CreateWork extends TestInfo{
     /**
 
      * @auther: luopeng
@@ -29,7 +29,7 @@ public class createWork extends TestInfo{
     public static void createWorkByProtal(AppiumDriver Driver, String Word1, String Word2, String theRecipien ,String theDepartment) throws InterruptedException {
 
         try {
-            AppBase.ClickXpath("//android.widget.TextView[@text='门户", Driver);
+            AppBase.clickXpath("//android.widget.TextView[@text='门户", Driver);
             Thread.sleep(2000);
 
             //默认测试门户 快捷入口在下方
@@ -37,14 +37,14 @@ public class createWork extends TestInfo{
             Thread.sleep(2000);
 
             //点击 快捷入口 默认第一个入口
-            AppBase.ClickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]", Driver);
+            AppBase.clickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]", Driver);
             Thread.sleep(2000);
 
             //快捷入口配置 进入创建页
             SelectAction.newWorkTextInPut(Driver, Word1, Word2, theRecipien, theDepartment);
 
             //点击提交按钮
-            AppBase.ClickId("com.android.ayplatform"+type+":id/flow_detail_submit_Button", Driver);
+            AppBase.clickId("com.android.ayplatform"+type+":id/flow_detail_submit_Button", Driver);
             Thread.sleep(2000);
 
         }catch (Error e){
@@ -69,7 +69,7 @@ public class createWork extends TestInfo{
 
         try {
 
-            AppBase.ClickXpath("MainPage_Bar_App_Xpath", Driver);
+            AppBase.clickXpath("MainPage_Bar_App_Xpath", Driver);
             Thread.sleep(3000);
 
             //默认autotest 应用在最下方
@@ -77,22 +77,22 @@ public class createWork extends TestInfo{
             Thread.sleep(2000);
 
             //点击应用 autotest
-            AppBase.ClickXpath("//android.widget.TextView[@text='autotest']", Driver);
+            AppBase.clickXpath("//android.widget.TextView[@text='autotest']", Driver);
             Thread.sleep(2000);
 
             //点击实例 进入列表页
-            AppBase.ClickId("com.android.ayplatform"+type+":id/appcenter_myapp_detail_children_text", Driver);
+            AppBase.clickId("com.android.ayplatform"+type+":id/appcenter_myapp_detail_children_text", Driver);
             Thread.sleep(2000);
 
             //点击 新建 按钮
-            AppBase.ClickId("com.android.ayplatform"+type+":id/activity_info_new", Driver);
+            AppBase.clickId("com.android.ayplatform"+type+":id/activity_info_new", Driver);
             Thread.sleep(2000);
 
             //快捷入口配置 进入创建页
             SelectAction.newWorkTextInPut(Driver, Word1, Word2, theRecipien, theDepartment);
 
             //点击提交按钮
-            AppBase.ClickId("com.android.ayplatform"+type+":id/flow_detail_submit_Button", Driver);
+            AppBase.clickId("com.android.ayplatform"+type+":id/flow_detail_submit_Button", Driver);
             Thread.sleep(2000);
 
         } catch (Error e) {
