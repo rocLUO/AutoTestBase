@@ -97,7 +97,7 @@ public class Case2 extends TestInfo {
 	public void plus() throws InterruptedException {
 
 		login();
-//		changeAccount();
+//		ChangeAccount();
 
 		waitForXpath("待办工作", MainPage_Tag_Already_Xpath);
 		clickXpath(MainPage_NewWork_Id);
@@ -255,7 +255,7 @@ public class Case2 extends TestInfo {
 		}
 	}
 /*
-	public void changeAccount() {
+	public void ChangeAccount() {
 		AppBase.textPrint("Account Change Act start!");
 
 		try {

@@ -16,7 +16,15 @@ import java.sql.Driver;
 public class OpenProtalComponent {
 
     public static void openMessageComponent(AppiumDriver Driver) throws InterruptedException {
-
+        /**
+         * @param: [Driver]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/7/9 17:26
+         *
+         * @description :消息组件 点击全屏
+         */
         try {
 
             AppBase.clickXpath("//android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.TextView[1]", Driver);
@@ -27,17 +35,17 @@ public class OpenProtalComponent {
         }
     }
 
-    /**
-     * @param: WorkType: 代办工作,最近处理,我发起的
-     * @param: WorkNum: 1,2,3,4,5,6
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/15 10:48
-     *
-     * @description : 门户页面 1.点击工作组件 全屏 -> 点击选择工作 标签 -> 点击选择列表 工作
-     */
+
     public static void openWorkCompomment(AppiumDriver Driver, String WorkType, int WorkNum) throws InterruptedException {
+        /**
+         * @param: [Driver, WorkType, WorkNum]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/6/15 10:48
+         *
+         * @description :工作组件打开工作 : 门户页面 -> 点击工作组件 全屏 -> 点击选择工作 标签 -> 点击选择列表 工作
+         */
 
         try {
             //工作组件默认在中下方,需滑动一次

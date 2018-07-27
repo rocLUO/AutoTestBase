@@ -13,16 +13,16 @@ import io.appium.java_client.AppiumDriver;
  */
 public class OpenAppList extends TestInfo{
 
-    /**
-     * @param:
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/14 14:28
-     *
-     * @description : 从门户->快捷入口组件 进入应用实例列表
-     */
-    public static void viewWrokListByProtal(AppiumDriver Driver) throws InterruptedException {
+    public static void viewWrokListByProtal(AppiumDriver Driver, int appNum) throws InterruptedException {
+        /**
+         * @param: [Driver, appNum]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/6/14 14:28
+         *
+         * @description :从门户->快捷入口组件 点击应用入口
+         */
 
         try{
             AppBase.clickXpath(MainPage_Bar_Protal_Xpath, Driver);
@@ -32,10 +32,9 @@ public class OpenAppList extends TestInfo{
             AppBase.swipXY(585, 1805, 585, 249, Driver);
             Thread.sleep(2000);
 
-            //点击 快捷入口 列表页 默认第三个入口
-            AppBase.clickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[3]", Driver);
+            //点击 快捷入口 列表页
+            AppBase.clickXpath("//android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout["+ appNum +"]", Driver);
             Thread.sleep(2000);
-
 
         } catch (Error e){
             e.printStackTrace();
@@ -44,17 +43,16 @@ public class OpenAppList extends TestInfo{
 
     }
 
-    /**
-     * @param:
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/14 14:28
-     *
-     * @description :从 应用中心-> 应用 进入实例列表
-     */
-    public static void viewWorkListByAppCeneter(AppiumDriver Driver) throws InterruptedException {
-
+    public static void viewWorkListByAppCeneter(AppiumDriver Driver, String appName) throws InterruptedException {
+        /**
+         * @param: [Driver, appName]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/6/14 14:28
+         *
+         * @description :从 应用中心-> 应用 进入实例列表
+         */
         try {
             AppBase.clickXpath("MainPage_Bar_App_Xpath", Driver);
             Thread.sleep(3000);
@@ -64,7 +62,7 @@ public class OpenAppList extends TestInfo{
             Thread.sleep(2000);
 
             //点击应用 autotest
-            AppBase.clickXpath("//android.widget.TextView[@text='autotest']", Driver);
+            AppBase.clickXpath("//android.widget.TextView[@text='"+ appName +"']", Driver);
             Thread.sleep(2000);
 
             //点击实例 进入列表页

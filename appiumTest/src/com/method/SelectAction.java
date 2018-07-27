@@ -10,80 +10,50 @@ import io.appium.java_client.AppiumDriver;
  * Date: 2018/6/14
  * Time: 13:57
  *
- * Description:
+ * Description: 人员提交 与 人员选择 操作
  */
 public class SelectAction extends TestInfo{
 
-    /**
-     * @param: Text1 : 输入字段1
-     * @param: Text2 : 输入字段2
-     * @param: department : 接收人部门 xpath
-     * @param: recipien : 接收人 xpath
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/14 14:03
-     *
-     * @description : 新建 autotest 实例后,实例内容编辑
-     */
-    public static void newWorkTextInPut(AppiumDriver Driver, String Text1, String Text2, String department, String recipien) throws InterruptedException {
-        //输入框,输入内容1
-        AppBase.inPutByXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText", "TestTest", Driver);
-        Thread.sleep(2000);
-
-        //输入框,输入内容2
-        AppBase.inPutByXpath("//android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText", "TestTest", Driver);
-        Thread.sleep(2000);
-
-        //点击 添加接受人
-        AppBase.clickId("com.android.ayplatform"+type+":id/org_add_user_imageView", Driver);
-        Thread.sleep(2000);
-
-        //提交人员组织页面操作
-        submission(Driver, department, recipien);
-
-    }
-
-    /**
-     * @param Recipien 接收人 Xpath
-     * @param Department 接收人部门 Xpath
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/14 14:03
-     *
-     * @description : 提交按钮后,人员组织页面操作
-     */
     public static void submission(AppiumDriver Driver, String Department, String Recipien) throws InterruptedException {
+        /**
+         * @param: [Driver, Department, Recipien]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/6/14 14:03
+         *
+         * @description : 工作提交接收人选择 : 组织架构页 -> 选择部门 -> 选择人员 -> 点击确定
+         */
 
         //滑动到最下,默认接收测试帐号部门在最底
         AppBase.swipXY(504, 1752, 504, 347, Driver);
         Thread.sleep(3000);
 
         //点击 接收人 部门 Department -Xpath
-        AppBase.clickXpath(Department, Driver);
+        AppBase.clickXpath("//android.widget.TextView[@text='"+Department+"']", Driver);
         Thread.sleep(2000);
 
         //点击 接收人 Recipien -Xapth
-        AppBase.clickXpath(Recipien, Driver);
+        AppBase.clickXpath("//android.widget.TextView[@text='"+Recipien+"']", Driver);
         Thread.sleep(2000);
 
         //点击 确定 选择
-        AppBase.clickId("com.android.ayplatform"+type+":id/orgstructure_colleagues_display_submit", Driver);
+        AppBase.clickId(Company_Select_done_Id,Driver);
         Thread.sleep(2000);
     }
 
-    /**
-     * @param:
-     *
-     * @auther: luopeng
-     *
-     * @date: 2018/6/14 16:33
-     *
-     * @description : 抄送/委托 人员选择 下滑次数
-     */
-    public static void choosesMen(AppiumDriver Driver, String department, String recipoen, int swipTime) throws InterruptedException {
-
+    public static void choosesMen(AppiumDriver Driver, String department, String Name, int swipTime) throws InterruptedException {
+        /**
+         * @param: [Driver, department, recipoen, swipTime]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/6/14 16:33
+         *
+         * @description : 组织架构人员选择 : 组织架构页 -> 滑动选择部门 -> 选择人员 -> 点击确定
+         */
+        //老版本 组织架构//
+        /*
         for(int i=0; i<swipTime; i++){
             if(swipTime==0){
                 break;
@@ -104,5 +74,56 @@ public class SelectAction extends TestInfo{
         //点击 确定
         AppBase.clickId("com.android.ayplatform"+type+":id/orgstructure_colleagues_display_submit", Driver);
         Thread.sleep(2000);
+        */
+
+        //新版本 组织架构//
+        /**
+         * @param: [Driver, department, recipoen, swipTime]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/7/27 15:11
+         *
+         * @description : 停止使用
+         */
+
+        AppBase.clickId(Company_SearchIcon_Id,Driver);
+        Thread.sleep(2000);
+
+        AppBase.inPutById(Company_SearchInput_Id,Name,Driver);
+        Thread.sleep(2000);
+
+        AppBase.clickXpath("//android.widget.TextView[@text='"+ Name + "']",Driver);
+        Thread.sleep(2000);
+
+        AppBase.clickId(Company_SearchSelect_done_Id,Driver);
+        Thread.sleep(2000);
+    }
+
+    public static void searchMen(AppiumDriver Driver, String Name) throws InterruptedException {
+        /**
+         * @param: [Driver, Name]
+         *
+         * @auther: luopeng
+         *
+         * @date: 2018/7/12 15:10
+         *
+         * @description : 组织架构页 搜索 选择人员 : 组织架构页 -> 点击 搜索ican -> 输入 name -> 选择 name -> 点击 确定
+         */
+        try {
+            AppBase.clickId(Company_SearchIcon_Id,Driver);
+            Thread.sleep(2000);
+
+            AppBase.inPutById(Company_SearchInput_Id,Name,Driver);
+            Thread.sleep(2000);
+
+            AppBase.clickXpath("//android.widget.TextView[@text='"+ Name + "']",Driver);
+            Thread.sleep(2000);
+
+            AppBase.clickId(Company_SearchSelect_done_Id,Driver);
+            Thread.sleep(2000);
+        } catch (Error e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -231,7 +231,7 @@ public class Case1 extends TestInfo {
 		driver.swipe(X1, Y1, X2, Y2, 1000);
 	}
 
-	public void Back() {
+	public void back() {
 		driver.navigate().back();
 	}
 

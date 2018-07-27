@@ -17,7 +17,7 @@ import static org.testng.Assert.fail;
 
 import java.net.URL;
 
-import com.method.changeAccount;
+import com.method.ChangeAccount;
 import com.method.LoginApp;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -64,7 +64,7 @@ public class Case_personalData extends TestInfo {
     public void case1_1_1() throws InterruptedException {
 
         try {
-            changeAccount.switchAccount(driver,"企业管理员正牌",0);
+            ChangeAccount.switchAccount(driver,"企业管理员正牌",0);
         } catch (Error e) {
             e.printStackTrace();
             AppBase.screenSnap(driver);
@@ -132,10 +132,10 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/doing",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);
@@ -179,7 +179,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/confirm_tv",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);
@@ -262,10 +262,10 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/aboutqycloud_introduce_layout",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);
@@ -300,14 +300,14 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/ll_wallet_recharge",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //点击体现
             AppBase.clickId("com.android.ayplatform"+ type +":id/ll_getDeposit",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //1-------------------------------------
@@ -323,7 +323,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/ll_in",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //2-------------------------------------
@@ -331,7 +331,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/rl_accountInfo",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //3-------------------------------------
@@ -351,7 +351,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/ll_all",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //4-------------------------------------
@@ -359,7 +359,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/rl_secureSetting",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             //5-------------------------------------
@@ -367,10 +367,10 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/rl_mybank",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);
@@ -401,7 +401,7 @@ public class Case_personalData extends TestInfo {
             AppBase.clickXY(804,135,"点击 我的二维码",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(765,260,"点击 编辑 按钮",driver);
@@ -410,10 +410,10 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("com.android.ayplatform.release:id/activity_ayprivate_accountinfo_qrcode",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);
@@ -541,40 +541,40 @@ public class Case_personalData extends TestInfo {
             AppBase.clickId("//android.widget.TextView[@text='工作交办']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickId("//android.widget.TextView[@text='提到我的']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickId("//android.widget.TextView[@text='工作动态']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickId("//android.widget.TextView[@text='组织架构变动']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickId("//android.widget.TextView[@text='系统消息']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clearId("//android.widget.TextView[@text='我评论的']",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
             AppBase.clickXY(1000,900,"点击空白处 关闭弹窗页",driver);

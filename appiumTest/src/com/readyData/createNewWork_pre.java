@@ -1,7 +1,7 @@
 /**
  * com.readyData
  * appiumTest
- * createNewWork_pre.java
+ * CreateNewWork_pre.java
  *
  * Copyright 2018 QYcloud Product test group
  *
@@ -36,7 +36,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
-public class createNewWork_pre extends TestInfo {
+public class CreateNewWork_pre extends TestInfo {
 	private static AppiumDriver driver;
 
 	@BeforeClass
@@ -131,9 +131,9 @@ public class createNewWork_pre extends TestInfo {
 				//保存
 				AppBase.clickId("com.android.ayplatform.pre:id/flow_detail_save_Button", driver);
 				Thread.sleep(1000);
-				AppBase.Back(driver);
+				AppBase.back(driver);
 				Thread.sleep(1000);
-				AppBase.Back(driver);
+				AppBase.back(driver);
 				Thread.sleep(1000);
 
 				i++;

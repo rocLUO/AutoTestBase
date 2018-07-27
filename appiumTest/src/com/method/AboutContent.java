@@ -33,6 +33,16 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
+    /**
+     * @param:
+     *
+     * @auther: luopeng
+     *
+     * @date: 2018/7/5 16:36
+     *
+     * @description : 进入编辑页: 打开 发现 -> 打开 工作全 -> 点击发布
+     */
+
 public class AboutContent extends TestInfo {
     public static void newContent(AppiumDriver Driver) throws InterruptedException {
 
@@ -48,6 +58,34 @@ public class AboutContent extends TestInfo {
         Thread.sleep(2000);
 
     }
+
+    public static void sendWordContent(AppiumDriver Driver,String Text) throws InterruptedException {
+
+        try {
+            AboutContent.newContent(Driver);
+
+            AppBase.inPutById("com.android.ayplatform"+ type +":id/activity_published_talking_et",Text,Driver);
+            Thread.sleep(2000);
+
+            //发送
+            AppBase.clickId("com.android.ayplatform"+ type +":id/head_right_doing",Driver);
+            Thread.sleep(3000);
+
+        } catch (Error e) {
+            e.printStackTrace();
+            AppBase.screenSnap(Driver);
+        }
+    }
+
+    /**
+     * @param:
+     *
+     * @auther: luopeng
+     *
+     * @date: 2018/7/5 16:37
+     *
+     * @description : 工作圈第一条评论发布: 工作圈页 -> 点击 第一条消息 评论 -> 输入字符 ->点击发送
+     */
 
     public static void sendComment(AppiumDriver Driver) throws InterruptedException {
         AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,Driver);

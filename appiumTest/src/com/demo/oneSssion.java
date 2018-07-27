@@ -355,7 +355,7 @@ public class oneSssion extends TestInfo{
 		snapshot((TakesScreenshot) driver, AppBase.getCurrentSystemTime() + ".png");
 	}
 
-	public void Back() {
+	public void back() {
 
 		driver.navigate().back();
 	}

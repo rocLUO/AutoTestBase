@@ -35,7 +35,7 @@ import com.appium.TestBase.TestInfo;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-public class createNewWork_release extends TestInfo {
+public class CreateNewWork_release extends TestInfo {
 	private static AppiumDriver driver;
 
 	@BeforeClass

@@ -47,7 +47,7 @@ public class demo2 extends driverPublic {
 	@Test
 	public void plus() throws InterruptedException {
 
-		AppBase.Back(driver);
+		AppBase.back(driver);
 	}
 
 	@AfterClass

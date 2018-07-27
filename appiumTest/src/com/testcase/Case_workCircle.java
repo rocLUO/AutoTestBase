@@ -25,17 +25,9 @@ package com.testcase;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 
 import com.method.SelectAction;
-import com.method.changeAccount;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -46,10 +38,7 @@ import com.appium.TestBase.AppBase;
 import com.appium.TestBase.TestInfo;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-
-import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
 
 public class Case_workCircle extends TestInfo {
 
@@ -211,10 +200,10 @@ public class Case_workCircle extends TestInfo {
             AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.view.ViewGroup/android.widget.ImageView",driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
-            AppBase.Back(driver);
+            AppBase.back(driver);
             Thread.sleep(2000);
 
         } catch (Error e) {
@@ -279,7 +268,8 @@ public class Case_workCircle extends TestInfo {
             Thread.sleep(2000);
 
             //人员组织架构 人员选择-方法
-            SelectAction.choosesMen(driver,"autoTest","autoAccunt01",2);
+            //SelectAction.choosesMen(driver,"autoTest","autoAccunt01",2);
+            SelectAction.searchMen(driver,"autoAccunt01");
             Thread.sleep(2000);
 
             //发送
@@ -385,7 +375,7 @@ public class Case_workCircle extends TestInfo {
             AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]",driver);
             Thread.sleep(3000);
 
-            AppBase.clickXpath("//android.widget.Button[@text='确定']",driver);
+            AppBase.clickXpath(Button_Cancel_Xpath,driver);
             Thread.sleep(3000);
 
         } catch (Error e) {
@@ -487,7 +477,7 @@ public class Case_workCircle extends TestInfo {
 //        	sendComment();
 //
 //            //切换账户 至 骆2
-//            changeAccount.switchAccount(driver);
+//            ChangeAccount.switchAccount(driver);
 //            Thread.sleep(2000);
 //
 //            AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,driver);
@@ -509,7 +499,7 @@ public class Case_workCircle extends TestInfo {
 //            AppBase.clickId("com.android.ayplatform"+ type +":id/input_box_view_send_sms",driver);
 //            Thread.sleep(2000);
 //            
-//            AppBase.Back(driver);
+//            AppBase.back(driver);
 //
 //        } catch (Error e) {
 //            e.printStackTrace();

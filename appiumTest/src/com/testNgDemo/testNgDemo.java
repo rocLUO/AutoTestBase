@@ -89,7 +89,7 @@ public class TestNgDemo extends TestInfo {
 	public void plus() throws InterruptedException {
 
 		//login();
-		//changeAccount();
+		//ChangeAccount();
 
 		//waitForXpath("待办工作", MainPage_Tag_Already_Xpath);
 		Thread.sleep(2000);
@@ -256,7 +256,7 @@ public class TestNgDemo extends TestInfo {
 		}
 	}
 /*
-	public void changeAccount() {
+	public void ChangeAccount() {
 		AppBase.textPrint("Account Change Act start!");
 
 		try {
