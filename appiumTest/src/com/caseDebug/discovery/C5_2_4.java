@@ -29,7 +29,7 @@ public class C5_2_4 extends TestInfo {
 
             //点击 定位
             AppBase.clickId("com.android.ayplatform"+ type +":id/activity_published_talking_location_tv",Driver);
-            Thread.sleep(3000);
+            Thread.sleep(6000);
 
             //点击确定定位
             AppBase.clickId("com.android.ayplatform"+ type +":id/head_right_doing",Driver);

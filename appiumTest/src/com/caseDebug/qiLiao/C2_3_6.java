@@ -41,6 +41,9 @@ public class C2_3_6 extends TestInfo {
             AppBase.clickId(QiLiao_AtSearch_Id,Driver);
             Thread.sleep(2000);
 
+            AppBase.clickId(QiLiao_AtSearchInPut_Id,Driver);
+            Thread.sleep(2000);
+
             AppBase.inPutById(QiLiao_AtSearchInPut_Id,"autoAccunt01",Driver);
             Thread.sleep(2000);
 

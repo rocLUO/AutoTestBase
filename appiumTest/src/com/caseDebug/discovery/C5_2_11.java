@@ -34,7 +34,7 @@ public class C5_2_11 extends TestInfo{
             AppBase.back(Driver);
 
             //切换账户 至 帐号2
-            ChangeAccount.reloadAccount(Driver,"luopeng2","luopeng2");
+            ChangeAccount.reloadAccount(Driver,"luopeng2","luopeng123");
             Thread.sleep(2000);
 
             //评论 朋友圈

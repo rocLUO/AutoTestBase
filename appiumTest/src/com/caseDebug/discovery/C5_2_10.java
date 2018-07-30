@@ -21,10 +21,19 @@ public class C5_2_10 extends TestInfo {
         try {
             Thread.sleep(waitTime);
 
+            AboutContent.newContent(Driver);
+
+            AppBase.inPutById("com.android.ayplatform"+ type +":id/activity_published_talking_et","testestest",Driver);
+            Thread.sleep(3000);
+
+            //发送
+            AppBase.clickId("com.android.ayplatform"+ type +":id/head_right_doing",Driver);
+            Thread.sleep(4000);
+
             AboutContent.sendComment(Driver);
 
             //点击第一条 工作圈 评论内容
-            AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout[3]/android.widget.LinearLayout/android.widget.TextView[1]",Driver);
+            AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.TextView",Driver);
             Thread.sleep(2000);
 
             //点击弹窗中 删除

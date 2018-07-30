@@ -30,7 +30,7 @@ public class C5_2_7 extends TestInfo{
             AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]",Driver);
             Thread.sleep(3000);
 
-            AppBase.clickXpath(Button_Cancel_Xpath,Driver);
+            AppBase.clickXpath(Button_Confrim_Xpath,Driver);
             Thread.sleep(3000);
 
         } catch (Error e) {

@@ -67,7 +67,7 @@ public class CheckOftenCaseUse extends TestInfo {
 
         /*
          * 中文输入,隐藏键盘启动 capabilities.setCapability("unicodeKeyboard", "True");
-         * capabilities.setCapability("resetKyboard", "True");
+         * capabilities.setCapa1ebility("resetKyboard", "True");
          */
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
@@ -78,7 +78,7 @@ public class CheckOftenCaseUse extends TestInfo {
     public void test() throws InterruptedException {
 //        ChangeAccount.switchAccount(driver,"企业管理员正牌",1);
 //        ChangeAccount.reloadAccount(driver,"luopeng2","luopeng2");
-    	C5_2_2.case5_2_2(driver);
+    	C2_3_6.case2_3_6(driver);
         //AppBase.closeApp(driver);
     }
 

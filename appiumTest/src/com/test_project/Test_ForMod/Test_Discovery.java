@@ -152,7 +152,7 @@ public class Test_Discovery extends TestInfo {
 
         AppBase.closeApp(driver);
     }
-
+/*
     @Test(description = "工作圈-评论回复")
     public void case5_2_11() throws InterruptedException {
         AppBase.launchApp(driver);
@@ -161,7 +161,7 @@ public class Test_Discovery extends TestInfo {
 
         AppBase.closeApp(driver);
     }
-
+*/
     @Test(description = "工作圈-@搜索")
     public void case5_2_12() throws InterruptedException {
         AppBase.launchApp(driver);

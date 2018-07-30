@@ -19,6 +19,13 @@ public class C5_2_9 extends TestInfo {
     public static void case5_2_9(AppiumDriver Driver) throws InterruptedException {
 
         try {
+            Thread.sleep(waitTime);
+            AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,Driver);
+            Thread.sleep(3000);
+
+            //点击工作圈
+            AppBase.clickId("com.android.ayplatform"+ type +":id/item_message_label",Driver);
+            Thread.sleep(3000);
 
             Thread.sleep(waitTime);
             AboutContent.sendComment(Driver);

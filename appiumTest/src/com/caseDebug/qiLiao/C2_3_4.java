@@ -22,16 +22,16 @@ public class C2_3_4 extends TestInfo {
             Thread.sleep(waitTime);
 
             AppBase.clickXpath(MainPage_Bar_QiLiao_Xpath, Driver);
-            Thread.sleep(2000);
+            Thread.sleep(3000);
 
-            AppBase.clickId(QiLiao_MailList_Xpath, Driver);
-            Thread.sleep(2000);
+            AppBase.clickXpath(QiLiao_MailList_Xpath, Driver);
+            Thread.sleep(3000);
 
-            AppBase.clickId(QiLiao_MailSearch_Xpath, Driver);
-            Thread.sleep(2000);
+            AppBase.clickXpath(QiLiao_MailSearch_Xpath, Driver);
+            Thread.sleep(3000);
 
-            AppBase.inPutById(SearchList_SearchInput_Id, "autoAccunt", Driver);
-            Thread.sleep(2000);
+            AppBase.inPutById(SearchList_SearchInput_Id, "autoAccunt01", Driver);
+            Thread.sleep(3000);
 
             //点击第一个搜索结果
             AppBase.clickXpath("//android.widget.TextView[@text='autoAccunt01']", Driver);

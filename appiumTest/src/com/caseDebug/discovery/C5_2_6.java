@@ -27,7 +27,7 @@ public class C5_2_6 extends TestInfo {
 
             //点击 定位
             AppBase.clickId("com.android.ayplatform"+ type +":id/activity_published_talking_location_tv",Driver);
-            Thread.sleep(3000);
+            Thread.sleep(6000);
 
             //点击确定定位
             AppBase.clickId("com.android.ayplatform"+ type +":id/head_right_doing",Driver);
@@ -47,7 +47,7 @@ public class C5_2_6 extends TestInfo {
 
             //点击 相机
             AppBase.clickId("com.android.ayplatform"+ type +":id/activity_published_talking_cameral",Driver);
-            Thread.sleep(3000);
+            Thread.sleep(5000);
 
             //点击 拍摄
             AppBase.clickId("com.huawei.camera:id/shutter_button",Driver);

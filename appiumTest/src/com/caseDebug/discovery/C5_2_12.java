@@ -29,7 +29,7 @@ public class C5_2_12 extends TestInfo {
             AppBase.clickId("com.android.ayplatform"+ type +":id/activity_published_talking_alt",Driver);
             Thread.sleep(2000);
 
-            SelectAction.choosesMen(Driver,"autoTest","autoAccunt01",2);
+            SelectAction.searchMen(Driver,"autoAccunt01");
             Thread.sleep(2000);
 
             //点击 发布

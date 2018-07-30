@@ -84,16 +84,16 @@ public class AboutContent extends TestInfo {
      *
      * @date: 2018/7/5 16:37
      *
-     * @description : 工作圈第一条评论发布: 工作圈页 -> 点击 第一条消息 评论 -> 输入字符 ->点击发送
+     * @description : 工作圈第一条评论发布: 点击 第一条消息 评论 -> 输入字符 ->点击发送
      */
 
     public static void sendComment(AppiumDriver Driver) throws InterruptedException {
-        AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,Driver);
-        Thread.sleep(3000);
-
-        //点击工作圈
-        AppBase.clickId("com.android.ayplatform"+ type +":id/item_message_label",Driver);
-        Thread.sleep(2000);
+//        AppBase.clickXpath(MainPage_Bar_Discovery_Xpath,Driver);
+//        Thread.sleep(3000);
+//
+//        //点击工作圈
+//        AppBase.clickId("com.android.ayplatform"+ type +":id/item_message_label",Driver);
+//        Thread.sleep(2000);
 
         //点击 评论
         AppBase.clickXpath("//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[3]",Driver);

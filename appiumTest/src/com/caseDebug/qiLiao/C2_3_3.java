@@ -46,7 +46,7 @@ public class C2_3_3 extends TestInfo {
             Thread.sleep(2000);
             AppBase.clickXpath(QiLiao_MailList_Xpath, Driver);
             Thread.sleep(2000);
-            AppBase.clickXpath("//android.widget.TextView[@text='alex']", Driver);
+            AppBase.clickXpath("//android.widget.TextView[@text='autoAccunt01']", Driver);
             // 商务通话
             Thread.sleep(2000);
             // clickId("com.android.ayplatform"+type+":id/item_chat_colleaguedetail_content_call");
