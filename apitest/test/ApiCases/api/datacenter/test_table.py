@@ -44,20 +44,20 @@ class CalTest(unittest.TestCase):
            平台应用场景：获取这个表在数据中心所配的所有主表
         '''
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.get(Login().url + '/api/datacenter/table/master/dfcong')
+        sendrequest = nowlogin.get(Login().url + '/api/datacenter/table/main/dfcong')
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(200, sendrequest.json()['status'], msg='【status】获取这个表在数据中心所配的所有主表')  # # 断言(检查返回值status)
         self.assertEqual('DF主', sendrequest.json()['result']['dfzhu']['title'],
                          msg='【response】获取这个表在数据中心所配的所有主表')  # 断言(检查返回值response)
 
-    def test_getslaveTable(self):
+    def test_getsubordinateTable(self):
         '''获取这个表在数据中心所配的所有从表
            应用访问地址：数据中心
            平台应用场景：获取这个表在数据中心所配的所有从表
         '''
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.get(Login().url + '/api/datacenter/table/slave/dfzhu')
+        sendrequest = nowlogin.get(Login().url + '/api/datacenter/table/subordinate/dfzhu')
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual('DF从', sendrequest.json()['dfcong']['title'],

@@ -18,9 +18,9 @@ class CalTest(unittest.TestCase):
             'instanceId': 49,
             'nodeId': 'WorkNode_1',
             'workflowId': 'YiDongDuanZhuCong',
-            'slave_id': 'yidongduanzhucongco',
-            'data': '{"slaveId":"yidongduanzhucongco","slaveKeyColumn":"","slaveName":"移动端主从-从表",'
-                    '"slave_item_fields":[{"schema":{"basic":"","belongs":"","controlledFields":"","created_time":"",'
+            'subordinate_id': 'yidongduanzhucongco',
+            'data': '{"subordinateId":"yidongduanzhucongco","subordinateKeyColumn":"","subordinateName":"移动端主从-从表",'
+                    '"subordinate_item_fields":[{"schema":{"basic":"","belongs":"","controlledFields":"","created_time":"",'
                     '"creator":"","datasource":"","expression":"","expression_fields":"","formIndex":"","id":"id",'
                     '"index":"","last_modified":"","mainField":"","metadata":"","modifier":"","relationControlFields":"",'
                     '"relationMapFields":"","relationSearchFields":"","report":"","required":"","systemTime":"","title":"",'
@@ -62,10 +62,10 @@ class CalTest(unittest.TestCase):
                     '"required":"","systemTime":"","title":"","type":"","unique":""},"table_id":"","table_title":"","table_type":"",'
                     '"value":{"access_button":"","access_changeable":true,"access_deleteable":false,"access_readable":true,"id":"",'
                     '"last_modified":"","modified_method":"workflow/YiDongDuanZhuCong/49/WorkNode_1","modifier":"","owner":"",'
-                    '"value":"编辑从表记录新"},"workProviderType":"STRING"}],"slave_item_id":"1"}'
+                    '"value":"编辑从表记录新"},"workProviderType":"STRING"}],"subordinate_item_id":"1"}'
         }
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.put(Login().url + '/api2/data/workflow/editslave', data=values)
+        sendrequest = nowlogin.put(Login().url + '/api2/data/workflow/editsubordinate', data=values)
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(1200, sendrequest.json()['status'], msg='【status】APP流程从表记录编辑')  # 断言(检查返回值status是否为1200)

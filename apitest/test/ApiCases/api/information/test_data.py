@@ -17,8 +17,8 @@ class CalTest(unittest.TestCase):
         values = {'params[data][0][name]': 'dfcong_congzifuchuan',
                   'params[data][0][value]': '从表添加保存',
                   'params[appId]': 'DFCongBiaoTianJiaQua',
-                  'params[master][tableId]': 'dfzhu',
-                  'params[master][recordId]': 1
+                  'params[main][tableId]': 'dfzhu',
+                  'params[main][recordId]': 1
                   }
         nowlogin = Login().login('dulei')  # 登录系统
         sendrequest = nowlogin.post(Login().url + '/api/information/data/dfcong/', data=values)
@@ -130,7 +130,7 @@ class CalTest(unittest.TestCase):
            平台应用场景：流程从表导出
         '''
         params={
-            'params':'{"masterTableId":"wfmain","masterRecordId":"3","appId":"QuanZiDuanLiuCheng","type":"workflow","records":["2"]}'
+            'params':'{"mainTableId":"wfmain","mainRecordId":"3","appId":"QuanZiDuanLiuCheng","type":"workflow","records":["2"]}'
         }
         nowlogin = Login().login('admin')  # 登录系统
         sendrequest = nowlogin.get(

@@ -17,11 +17,11 @@ class CalTest(unittest.TestCase):
             'workflowId': 'YiDongDuanZhuCong',
             'instanceId': 49,
             'nodeId': 'WorkNode_1',
-            'slaveId': 'yidongduanzhucongco',
+            'subordinateId': 'yidongduanzhucongco',
             'id': 3
         }
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.delete(Login().url + '/api2/data/workflow/deleteslave', params=params)
+        sendrequest = nowlogin.delete(Login().url + '/api2/data/workflow/deletesubordinate', params=params)
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(1200, sendrequest.json()['status'], msg='【status】APP流程从表记录删除')  # 断言(检查返回值status是否为200)

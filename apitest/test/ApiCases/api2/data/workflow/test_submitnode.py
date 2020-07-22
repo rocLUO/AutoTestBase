@@ -44,7 +44,7 @@ class CalTest(unittest.TestCase):
                                                         r'\"needAssign\":false,\"Label\":\"委托审核\"}}","node_id":"WorkNode_1","node_name":"委托填写",'
                                                         r'"node_next_user":[{"AssignedMethods":"manual","AssignedTo":[{"Type":"member","id":"UIDdulei","parent_id":"7",'
                                                         r'"name":["产品测试组","组员","杜磊"],"type":"member","parent":"7","Parent":"7"}],"isDraft":true,'
-                                                        r'"node_id":"WorkNode_2","node_name":"委托审核","workflow_id":"WeiTuoYongLiYi"}],"slaves":[],'
+                                                        r'"node_id":"WorkNode_2","node_name":"委托审核","workflow_id":"WeiTuoYongLiYi"}],"subordinates":[],'
                                                         r'"users":[{"user_id":"ApiTest","user_name":"企业管理员"}],"workflow_id":"WeiTuoYongLiYi"}'
         }
         sendrequest = nowlogin.post(Login().url + '/api2/data/workflow/submitnode', data=values)

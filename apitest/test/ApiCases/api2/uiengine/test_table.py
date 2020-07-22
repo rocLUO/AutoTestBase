@@ -8,13 +8,13 @@ from apitest.test.method.checkmethod import isJson, outputrequest
 
 
 class CalTest(unittest.TestCase):
-    def test_Master(self):
+    def test_Main(self):
         '''获取应用主表
            应用访问地址：/app/!/information/DFMoRenPeiZhiHanCong
            平台应用场景：DF、WF自定义筛选入口进入时触发
         '''
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.get(Login().url + '/api2/uiengine/table/master/information/DFMoRenPeiZhiHanCong/0')
+        sendrequest = nowlogin.get(Login().url + '/api2/uiengine/table/main/information/DFMoRenPeiZhiHanCong/0')
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(200, sendrequest.json()['status'], msg='【status】获取应用主表')
@@ -89,10 +89,10 @@ class CalTest(unittest.TestCase):
            平台应用场景：默认视图——>表单配置——>保存
         '''
         values = {
-            'params': '{"master":{"tableId":"uiyinqingzhubiao"},"extend":[{"tableId":"uiyinqingcongbiao",'
+            'params': '{"main":{"tableId":"uiyinqingzhubiao"},"extend":[{"tableId":"uiyinqingcongbiao",'
                       '"condition":{"display":[],"required":[],"displayType":"AND"},'
                       '"fields":[{"title":"从表字符串","table":"uiyinqingcongbiao","field":"congbiaozifuchuan"}],'
-                      '"type":"slave","magnifierConfig":[]},{"tableId":"uiyinqingziyingyongy",'
+                      '"type":"subordinate","magnifierConfig":[]},{"tableId":"uiyinqingziyingyongy",'
                       '"condition":{"display":[],"required":[],"displayType":"AND"},'
                       '"fields":[{"title":"子应用字段","table":"uiyinqingziyingyongy",'
                       '"field":"ziyingyongziduan"}],"type":"subapp","magnifierConfig":[]}],"magnifierConfig":[],"documents":{"word":[],"export":[]}}'
@@ -104,7 +104,7 @@ class CalTest(unittest.TestCase):
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(200, sendrequest.json()['status'], msg='【status】表单配置保存')
 
-    def test_SaveMaster(self):
+    def test_SaveMain(self):
         '''业务表设计新增表单(workflow:主表绑定)
            应用访问地址：/app/edit?id=162&type=workflow#!/step_2/WFYeWuBiaoXinZengBia/39
            平台应用场景：默认视图——>业务表设计——>选择表
@@ -113,7 +113,7 @@ class CalTest(unittest.TestCase):
         values = {
             'params[extra]': 'uiyinqingzhubiao',
             'params[table]': 'uiyinqingzhubiao',
-            'params[type]': 'master'
+            'params[type]': 'main'
         }
         nowlogin = Login().login('admin')  # 登录系统
         sendrequest = nowlogin.post(Login().url + '/api2/uiengine/table/workflow/WFYeWuBiaoXinZengBia/39',

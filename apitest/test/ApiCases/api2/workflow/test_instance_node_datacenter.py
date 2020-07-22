@@ -40,7 +40,7 @@ class CalTest(unittest.TestCase):
             'targetId': 0,
             'scId': 0,
             'params[appId]': 'GongZuoXieTong',
-            'params[slaveTableId]': 'gongzuoshouli',
+            'params[subordinateTableId]': 'gongzuoshouli',
             'params[paging][perPage]': 15,
             'params[paging][start]': 0,
             'params[condition]': '',
@@ -70,8 +70,8 @@ class CalTest(unittest.TestCase):
                     r'{"name":"wfsub01_sub01duoxuan","value":["B"]},{"name":"wfsub01_sub01fujian","value":[]},'
                     r'{"name":"wfsub01_sub01riqishijian","value":"2018-04-27 14:04:02"},'
                     r'{"name":"wfsub01_sub01zuzhijiagou","value":"{\"displayValue\":\"  云平台研发部  \",\"real\":{\"orgs\":{\"2\":{\"id\":\"2\",\"parent_id\":\"12\",\"Type\":\"department\"}},\"blacklist\":{}}}"}]',
-            'master_table_id': 'wfmain',
-            'master_record_id': 2
+            'main_table_id': 'wfmain',
+            'main_record_id': 2
         }
         nowlogin = Login().login('admin')  # 登录系统
         sendrequest = nowlogin.post(
