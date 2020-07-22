@@ -18,9 +18,9 @@ class CalTest(unittest.TestCase):
             'instanceId': 50,
             'nodeId': 'WorkNode_1',
             'workflowId': 'YiDongDuanZhuCong',
-            'slave_id': 'yidongduanzhucongco',
-            'data': r'{"slaveId":"yidongduanzhucongco","slaveKeyColumn":"","slaveName":"移动端主从-从表",'
-                    r'"slave_item_fields":[{"schema":{"basic":"0","belongs":"yidongduanzhucongco",'
+            'subordinate_id': 'yidongduanzhucongco',
+            'data': r'{"subordinateId":"yidongduanzhucongco","subordinateKeyColumn":"","subordinateName":"移动端主从-从表",'
+                    r'"subordinate_item_fields":[{"schema":{"basic":"0","belongs":"yidongduanzhucongco",'
                     r'"controlledFields":"{\"required_rule\":[],\"unchangeable_rule\":[],\"displayable_rule\":[]}",'
                     r'"created_time":"2017-03-09 11:13:12","creator":"ApiTest","datasource":"","expression":"0",'
                     r'"expression_fields":"[]","formIndex":"","id":"id","index":"1","last_modified":"2017-03-09 11:13:12",'
@@ -75,7 +75,7 @@ class CalTest(unittest.TestCase):
                     r'"value":"从表新增测试"},"workProviderType":"STRING"}]}'
         }
         nowlogin = Login().login('admin')  # 登录系统
-        sendrequest = nowlogin.post(Login().url + '/api2/data/workflow/submitslave', data=values)
+        sendrequest = nowlogin.post(Login().url + '/api2/data/workflow/submitsubordinate', data=values)
         outputrequest(sendrequest,os.path.abspath(__file__),sys._getframe().f_code.co_name)  # 输出请求方式和请求API到report中
         self.assertEqual(True, isJson(jsonstr=sendrequest), msg='判断返回值是否为json格式')  # 断言(判断返回值是否为json格式)
         self.assertEqual(1200, sendrequest.json()['status'], msg='【status】APP流程新增从表记录')
